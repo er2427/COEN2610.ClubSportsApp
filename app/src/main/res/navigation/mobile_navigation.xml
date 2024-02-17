@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/directoryFragment"
         android:name="com.example.clubsportsappnew.ui.home.DirectoryFragment"
-        android:label="DirectoryFragment" >
+        android:label="Directory" >
         <action
             android:id="@+id/action_nav_teams_to_directoryFragment"
             app:destination="@id/directoryFragment" />
