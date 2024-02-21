@@ -2,7 +2,7 @@ package com.example.clubsportsappnew;
 
 public class Versions {
 
-    private String clubName, President, Semester, description;
+    private String clubName, President, Semester, Email, description;
     private boolean expandable;
 
     public boolean isExpandable() {
@@ -13,17 +13,21 @@ public class Versions {
         this.expandable = expandable;
     }
 
-    public Versions(String clubName, String President, String Semester, String description) {
+    public Versions(String clubName, String President, String Semester, String Email, String description) {
         this.clubName = clubName;
         this.President = President;
         this.Semester = Semester;
+        this.Email = Email;
         this.description = description;
         this.expandable = false;
     }
 
-    public String getclubName() {
-        return clubName;
+    // Add a constructor with default description value
+    public Versions() {
+        this("", "", "", "", ""); // Set default description to an empty string
     }
+
+    public String getclubName() { return clubName; }
 
     public void setclubName(String clubName) {
         this.clubName = clubName;
@@ -33,9 +37,7 @@ public class Versions {
         return President;
     }
 
-    public void setPresident(String President) {
-        this.President = President;
-    }
+    public void setPresident(String President) { this.President = President; }
 
     public String getSemester() {
         return Semester;
@@ -44,6 +46,10 @@ public class Versions {
     public void setSemester(String Semester) {
         this.Semester = Semester;
     }
+
+    public String getEmail() { return Email; }
+
+    public void setEmail(String Email) { this.Email = Email; }
 
     public String getDescription() {
         return description;
@@ -59,6 +65,7 @@ public class Versions {
                 "clubName='" + clubName + '\'' +
                 ", President='" + President + '\'' +
                 ", Semester='" + Semester + '\'' +
+                ", Email = '" + Email + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

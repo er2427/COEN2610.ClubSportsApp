@@ -11,9 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.clubsportsappnew.Versions;
-
-import java.text.BreakIterator;
 import java.util.List;
 
 public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.VersionVH> {
@@ -36,6 +33,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
         Versions versions = versionsList.get(position);
         holder.clubNameTxt.setText(versions.getclubName());
         holder.PresidentTxt.setText(versions.getPresident());
+        holder.EmailTxt.setText(versions.getEmail());
         holder.SemesterTxt.setText(versions.getSemester());
         holder.descriptionTxt.setText(versions.getDescription());
 
@@ -50,7 +48,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
     public class VersionVH extends RecyclerView.ViewHolder {
 
-        TextView clubNameTxt, PresidentTxt, SemesterTxt, descriptionTxt;
+        TextView clubNameTxt, PresidentTxt, EmailTxt, SemesterTxt, descriptionTxt;
         LinearLayout linearLayout;
         RelativeLayout expandableLayout;
         public VersionVH(@NonNull View itemView) {
@@ -58,6 +56,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
             clubNameTxt = itemView.findViewById(R.id.code_name);
             PresidentTxt = itemView.findViewById(R.id.version);
+            EmailTxt = itemView.findViewById(R.id.contact);
             SemesterTxt = itemView.findViewById(R.id.api_level);
             descriptionTxt = itemView.findViewById(R.id.description);
 
