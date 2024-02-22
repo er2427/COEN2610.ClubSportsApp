@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+	<sport>
+		<sportName>Baseball - Men</sportName>
+		<contactName>Tyler Steck</contactName>
+		<contactEmail>Tyler.Steck@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Bowling</sportName>
+		<contactName>Joe Camarda</contactName>
+		<contactEmail>giuseppi.camarda@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Basketball - Men</sportName>
+		<contactName>John Gardiner</contactName>
+		<contactEmail>John.Gardiner@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Basketball - Women</sportName>
+		<contactName>Kelly Reilly</contactName>
+		<contactEmail>kelly.reilly@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Boxing</sportName>
+		<contactName>Manuel Hernandez</contactName>
+		<contactEmail>manuel.hernandez@marquette.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Curling</sportName>
+		<contactName>Jack Michaud</contactName>
+		<contactEmail>Jack.Michaud@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Equestrian</sportName>
+		<contactName>Keeley Starvel</contactName>
+		<contactEmail>Keeley.Starvel@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Womens Strength Club</sportName>
+		<contactName>Trin Burgess</contactName>
+		<contactEmail>Trin.Burgess@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>E-Sports</sportName>
+		<contactName>Matthew Audino</contactName>
+		<contactEmail>Matthew.Audino@Mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Fencing</sportName>
+		<contactName>Amaya Ibanez-Baldor</contactName>
+		<contactEmail>amaya.ibanez-baldor@marquette.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Field Hockey</sportName>
+		<contactName>Kara Finneke</contactName>
+		<contactEmail>Kara.Finneke@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Figure Skating</sportName>
+		<contactName>Kristina Chen</contactName>
+		<contactEmail>Kristina.chen@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Fishing</sportName>
+		<contactName>Connor Shrigley</contactName>
+		<contactEmail>connor.shrigley@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Golf - Men</sportName>
+		<contactName>Charlie Clark</contactName>
+		<contactEmail>c.k.clark@marquette.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Golf - Women</sportName>
+		<contactName>Ana ChaconRueda</contactName>
+		<contactEmail>Ana.chaconrueda@marquette.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Gymnastics</sportName>
+		<contactName>Joanna Lee</contactName>
+		<contactEmail>joanna.lee@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Ice Hockey</sportName>
+		<contactName>Henry Mansky</contactName>
+		<contactEmail>Henry.Mansky@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Ju-Jitsu</sportName>
+		<contactName>Benjamin Gustafson</contactName>
+		<contactEmail>Benjamin.Gustafson@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Lacrosse - Men</sportName>
+		<contactName>Garner Werntz</contactName>
+		<contactEmail>Garner.werntz@marquette.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Lacrosse - Women</sportName>
+		<contactName>Molly Bevan</contactName>
+		<contactEmail>Molley.Bevan@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Log Rolling</sportName>
+		<contactName>Samuel Brooks</contactName>
+		<contactEmail>samuel.brooks@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Power Lifting</sportName>
+		<contactName>Drew Wochner</contactName>
+		<contactEmail>drew.wochner@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Quidditch</sportName>
+		<contactName>Haley George</contactName>
+		<contactEmail>Haley.george@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Rock Climbing</sportName>
+		<contactName>Gavin Tacke</contactName>
+		<contactEmail>Gavin.Tacke@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Rowing</sportName>
+		<contactName>Eric Walsh </contactName>
+		<contactEmail>murc.treasure@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Rugby - Men</sportName>
+		<contactName>Aidan Madden</contactName>
+		<contactEmail>aidan.madden@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Rugby - Women</sportName>
+		<contactName>Keyaira Marshall</contactName>
+		<contactEmail>Keyaira.Marshall@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Running </sportName>
+		<contactName>Nora Treacy</contactName>
+		<contactEmail>Nora.Treacy@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Sailing</sportName>
+		<contactName>Kendall Herzog</contactName>
+		<contactEmail>Kendall.herzog@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Ski and Snowboard</sportName>
+		<contactName>Iris Murphy</contactName>
+		<contactEmail>Iris.Murphy@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Soccer- Men</sportName>
+		<contactName>Christian Romano</contactName>
+		<contactEmail>Christian.Romano@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Soccer - Women</sportName>
+		<contactName>Taylor Ward</contactName>
+		<contactEmail>Taylor.Ward@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Softball</sportName>
+		<contactName>Anna Bryant</contactName>
+		<contactEmail>Anna.Bryant@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Spikeball</sportName>
+		<contactName>Daniel Ciriacks</contactName>
+		<contactEmail>Daniel.Ciriacks@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Swimming &amp; Diving</sportName>
+		<contactName>Nicholas Enea</contactName>
+		<contactEmail>Nicholas.Enea@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Tae Kwon Do</sportName>
+		<contactName>Jordan Towe</contactName>
+		<contactEmail>Jordan.towe@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Tennis</sportName>
+		<contactName>Charlielu Hua</contactName>
+		<contactEmail>Charlielu.Hua@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Triathlon</sportName>
+		<contactName>Sydney Meyer</contactName>
+		<contactEmail>Sydney.Mayer@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Water polo</sportName>
+		<contactName>Samuel Voronenko</contactName>
+		<contactEmail>Samuel.Voronenko@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Ultimate Frisbee -Women</sportName>
+		<contactName>Molly Watson</contactName>
+		<contactEmail>Molly.Watson@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Ultimate Frisbee - Men</sportName>
+		<contactName>Francis Nuguid</contactName>
+		<contactEmail>Fanncis.Nuguid@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Volleyball - Men</sportName>
+		<contactName>Chris Brozynski</contactName>
+		<contactEmail>Christopher.Brozynski@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Volleyball - Women</sportName>
+		<contactName>Julia Marciniak</contactName>
+		<contactEmail>Julia.Marciniak@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Pickleball </sportName>
+		<contactName>Hayder Alkhalisy</contactName>
+		<contactEmail>Hayder.Alkhalisy@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Waterski &amp; Wakeboard</sportName>
+		<contactName>Jacqueline Hawley</contactName>
+		<contactEmail>Jacqueline.hawley@mu.edu</contactEmail>
+	</sport>
+</resources>
