@@ -1,10 +1,12 @@
 package com.example.clubsportsappnew;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.clubsportsappnew.ui.home.Filter;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -15,7 +17,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clubsportsappnew.databinding.ActivityMainBinding;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
                     // Navigate to DirectoryFragment when "Club Sports Directory" item is clicked
                     navController.navigate(R.id.directoryFragment);
                     drawer.closeDrawers(); // Close the drawer after navigation
+                    return true;
+                }
+                else if (id == R.id.nav_admin) {
+                    navController.navigate(R.id.nav_admin);
+                    drawer.closeDrawers();
                     return true;
                 }
                 return false;
