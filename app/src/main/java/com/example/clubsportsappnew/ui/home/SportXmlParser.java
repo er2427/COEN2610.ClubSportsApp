@@ -21,7 +21,7 @@ public class SportXmlParser {
 
         try {
             Resources resources = context.getResources();
-            XmlResourceParser parser = resources.getXml(R.xml.sports); // Assuming R.xml.sports_data is your XML file
+            XmlResourceParser parser = resources.getXml(R.xml.sports);
 
             int eventType = parser.getEventType();
             Versions currentSport = null;
@@ -60,6 +60,33 @@ public class SportXmlParser {
         }
 
         return versionsList;
+    }
+
+    public static ArrayList<String> parseSportNames(Context context) {
+        ArrayList<String> sportNames = new ArrayList<>();
+
+        try {
+            Resources resources = context.getResources();
+            XmlResourceParser parser = resources.getXml(R.xml.sports);
+
+            int eventType = parser.getEventType();
+
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                switch (eventType) {
+                    case XmlPullParser.START_TAG:
+                        if ("sportName".equals(parser.getName())) {
+                            sportNames.add(parser.nextText());
+                        }
+                        break;
+                }
+                eventType = parser.next();
+            }
+
+        } catch (XmlPullParserException | IOException e) {
+            Log.e("XmlParser", "Error parsing XML", e);
+        }
+
+        return sportNames;
     }
 
 }

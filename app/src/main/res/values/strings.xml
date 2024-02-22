@@ -13,7 +13,8 @@
     <string name="menu_teams">Club Sports Directory</string>
     <string name="menu_calendar">Calendar</string>
     <string name="menu_admin">Admin</string>
-    <string name="spinner_description">Choose a Team</string>
+    <string name="spinner_description">Filter by Sport</string>
+    <string name="team_choice_description">Choose a Team</string>
 
     <string name="logo_content_description">This is the Marquette logo</string>
 </resources>
