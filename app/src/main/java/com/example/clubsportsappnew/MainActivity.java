@@ -1,12 +1,10 @@
 package com.example.clubsportsappnew;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
-import com.example.clubsportsappnew.ui.home.Filter;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
