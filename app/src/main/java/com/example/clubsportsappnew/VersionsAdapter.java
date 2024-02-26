@@ -21,6 +21,11 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
         this.versionsList = versionsList;
     }
 
+    public void setFilteredList(List<Versions> versionsList) {
+        this.versionsList = versionsList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public VersionVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

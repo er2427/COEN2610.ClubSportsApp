@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SearchView;
 
 import com.example.clubsportsappnew.R;
 import com.example.clubsportsappnew.Versions;
@@ -22,6 +24,8 @@ public class DirectoryFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private List<Versions> versionsList;
+    private VersionsAdapter versionsAdapter;
+    private SearchView searchView;
 
     @Nullable
     @Override
@@ -33,6 +37,22 @@ public class DirectoryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        searchView = view.findViewById(R.id.searchView);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return false;
+            }
+        });
+
+        searchView.clearFocus();
         // Initialize RecyclerView
         recyclerView = view.findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
@@ -42,8 +62,25 @@ public class DirectoryFragment extends Fragment {
         SetRecyclerView();
 
         // Set up RecyclerView adapter
-        VersionsAdapter versionsAdapter = new VersionsAdapter(versionsList);
+        versionsAdapter = new VersionsAdapter(versionsList); // Use the class-level variable
         recyclerView.setAdapter(versionsAdapter);
+    }
+
+
+    private void filterList(String text) {
+        List<Versions> filteredList = new ArrayList<>();
+        for(Versions version : versionsList) {
+            if(version.getclubName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(version);
+            }
+        }
+
+        if(filteredList.isEmpty()){
+            Toast.makeText(requireContext(), "No Match Found", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            versionsAdapter.setFilteredList(filteredList);
+        }
     }
 
     private void SetRecyclerView() {
