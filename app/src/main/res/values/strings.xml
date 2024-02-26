@@ -3,18 +3,28 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="welcome_text">Welcome to Marquette Club Sports</string>
+
     <string name="nav_header_title">Elise Raschke</string>
     <string name="nav_header_subtitle">elise.raschke@marquette.edu</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+
+    <!--Navigation Menu Strings-->
     <string name="menu_home">Home</string>
     <string name="menu_favorites">Favorites</string>
     <string name="menu_teams">Club Sports Directory</string>
     <string name="menu_calendar">Calendar</string>
     <string name="menu_admin">Admin</string>
+
+    <!--Filter Strings-->
     <string name="spinner_description">Filter by Sport</string>
     <string name="team_choice_description">Choose a Team</string>
+
+
+    <!--Calendar Strings-->
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
 
     <string name="logo_content_description">This is the Marquette logo</string>
 </resources>
