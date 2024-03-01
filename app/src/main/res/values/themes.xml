@@ -22,4 +22,5 @@
     <style name="Theme.ClubSportsAppNew.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ClubSportsAppNew.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
