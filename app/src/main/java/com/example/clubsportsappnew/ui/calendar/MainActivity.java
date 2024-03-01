@@ -1,18 +1,23 @@
 package com.example.clubsportsappnew.ui.calendar;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import com.example.clubsportsappnew.R;
 
 public class MainActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
@@ -20,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
     private RecyclerView calendarRecyclerView;
     private LocalDate selectedDate;
 
+
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -42,11 +49,12 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
         ArrayList<String> daysInMonth = daysInMonthArray(selectedDate);
 
         CalendarAdapter calendarAdapter = new CalendarAdapter(daysInMonth, this);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7 );
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
     }
 
+    @SuppressLint("NewApi")
     private ArrayList<String> daysInMonthArray(LocalDate date)
     {
         ArrayList<String> daysInMonthArray = new ArrayList<>();
@@ -54,14 +62,8 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
 
         int daysInMonth = yearMonth.lengthOfMonth();
 
-        LocalDate firstOfMonth = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            firstOfMonth = selectedDate.withDayOfMonth(1);
-        }
-        int dayOfWeek = 0;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
-        }
+        LocalDate firstOfMonth = selectedDate.withDayOfMonth(1);
+        int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
 
         for(int i = 1; i <= 42; i++)
         {
@@ -76,25 +78,30 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
         }
         return  daysInMonthArray;
     }
+
+    @SuppressLint("NewApi")
     private String monthYearFromDate(LocalDate date)
     {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
         return date.format(formatter);
     }
 
+    @SuppressLint("NewApi")
     public void previousMonthAction(View view)
     {
         selectedDate = selectedDate.minusMonths(1);
         setMonthView();
     }
 
+    @SuppressLint("NewApi")
     public void nextMonthAction(View view)
     {
-        selectedDate= selectedDate.plusMonths(1);
+        selectedDate = selectedDate.plusMonths(1);
         setMonthView();
     }
+
     @Override
-    public void onItemClick(int position, String DayText)
+    public void onItemClick(int position, String dayText)
     {
         if(!dayText.equals(""))
         {
