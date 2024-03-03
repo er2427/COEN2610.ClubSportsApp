@@ -30,7 +30,7 @@ public class DirectoryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_directory, container, false);
+        return inflater.inflate(R.layout.fragment_directory, container, false); //get the layout from the xml
     }
 
     @Override
@@ -39,6 +39,7 @@ public class DirectoryFragment extends Fragment {
 
         searchView = view.findViewById(R.id.searchView);
 
+        // Set up the search view to filter the recycler view
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -74,7 +75,7 @@ public class DirectoryFragment extends Fragment {
                 filteredList.add(version);
             }
         }
-
+        //if there's no results for the search, alert the user
         if(filteredList.isEmpty()){
             Toast.makeText(requireContext(), "No Match Found", Toast.LENGTH_SHORT).show();
         }
