@@ -3,4 +3,6 @@
     <item name="text_directory" type="id" />
     <item name="action_nav_teams_to_directoryFragment" type="id"/>
     <item name="action_nav_to_filter" type="id" />
+    <item name="username" type="id" />
+    <item name="password" type="id" />
 </resources>
