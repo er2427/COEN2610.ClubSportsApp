@@ -1,0 +1,18 @@
+Index: app/src/main/res/values/ids.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <item name=\"text_directory\" type=\"id\" />\r\n    <item name=\"action_nav_teams_to_directoryFragment\" type=\"id\"/>\r\n    <item name=\"action_nav_to_filter\" type=\"id\" />\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/ids.xml b/app/src/main/res/values/ids.xml
+--- a/app/src/main/res/values/ids.xml	(revision 0b638aa7472e6bc2885c8dfddbbe14a6adfd9b1d)
++++ b/app/src/main/res/values/ids.xml	(date 1709882499268)
+@@ -3,4 +3,6 @@
+     <item name="text_directory" type="id" />
+     <item name="action_nav_teams_to_directoryFragment" type="id"/>
+     <item name="action_nav_to_filter" type="id" />
++    <item name="password" type="id" />
++    <item name="username" type="id" />
+ </resources>
+\ No newline at end of file
