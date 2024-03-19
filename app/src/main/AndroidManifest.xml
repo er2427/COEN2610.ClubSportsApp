@@ -29,6 +29,12 @@
             android:label="Login Page"
             android:theme="@style/Theme.ClubSportsAppNew.NoActionBar">
         </activity>
+        <activity
+            android:name=".ui.home.SignUpPage"
+            android:exported="true"
+            android:label="Signup Page"
+            android:theme="@style/Theme.ClubSportsAppNew.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
