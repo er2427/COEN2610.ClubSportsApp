@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class SignUpPage extends AppCompatActivity {
     private TextInputEditText passwordInput;
     private TextInputEditText checkPasswordInput;
     private Button createAccount;
+    private TextView backToLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class SignUpPage extends AppCompatActivity {
         lastName = findViewById(R.id.lastName);
         email = findViewById(R.id.email);
         username = findViewById(R.id.signUpUsername);
+        backToLogin = findViewById(R.id.BackToLoginText);
 
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,14 @@ public class SignUpPage extends AppCompatActivity {
                     Intent loginIntent = new Intent(SignUpPage.this, LoginPage.class);
                     startActivity(loginIntent);
                 }
+            }
+        });
+
+        backToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent3 = new Intent(SignUpPage.this, LoginPage.class);
+                startActivity(intent3);
             }
         });
     }
