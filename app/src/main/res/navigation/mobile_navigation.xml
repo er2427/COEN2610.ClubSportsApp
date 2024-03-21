@@ -13,6 +13,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.clubsportsappnew.ui.home.FavoritesFragment"
+        android:label="Favorites" >
+        <action
+            android:id="@+id/action_nav_teams_to_nav_favorites"
+            app:destination="@id/nav_favorites" />
+    </fragment>
+
+    <fragment
         android:id="@+id/directoryFragment"
         android:name="com.example.clubsportsappnew.ui.home.DirectoryFragment"
         android:label="Directory" >

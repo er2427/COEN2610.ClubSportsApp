@@ -4,11 +4,17 @@ public class Versions {
 
     private String clubName, President, Semester, Email, description;
     private boolean expandable;
+    private boolean isFavorite = false;
 
     public boolean isExpandable() {
         return expandable;
     }
-
+    public boolean isFavorite(){
+        return isFavorite;
+    }
+    public void setFavorite(boolean favorite){
+        isFavorite = favorite;
+    }
     public void setExpandable(boolean expandable) {
         this.expandable = expandable;
     }

@@ -4,9 +4,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,8 +46,22 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
         boolean isExpandable = versionsList.get(position).isExpandable();
         holder.expandableLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
-    }
 
+        Button favorite_button = holder.itemView.findViewById(R.id.favorite_button); // Change to your actual ID
+        favorite_button.setOnClickListener(view -> {
+            Versions currentVersion = versionsList.get(position);
+            currentVersion.setFavorite(!currentVersion.isFavorite());
+            updateStarIcon(currentVersion, favorite_button); // Update the star visually
+        });
+        updateStarIcon(versionsList.get(position), favorite_button);
+    }
+    private void updateStarIcon(Versions version, Button favorite_button) {
+        if (version.isFavorite()) {
+            favorite_button.setBackgroundResource(R.drawable.menu_favorites_fill); // Use your filled star drawable
+        } else {
+            favorite_button.setBackgroundResource(R.drawable.menu_favorites); // Use your hollow star drawable
+        }
+    }
     @Override
     public int getItemCount() {
         return versionsList.size();
