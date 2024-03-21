@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataset>
+	<practice>
+		<sportName>Baseball - Men</sportName>
+		<description>Practice</description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>10</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Baseball - Men</sportName>
+		<description>Practice</description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Basketball - Men </sportName>
+		<description>Practice </description>
+		<location>Rec Plex </location>
+		<type>Weekkly </type>
+		<day>Monday </day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Basketball - Men</sportName>
+		<description>Practice </description>
+		<location>Rec Plex</location>
+		<type>Weekly </type>
+		<day>Wednesday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Basketball - Women </sportName>
+		<description>Practice </description>
+		<location>Rec Plex</location>
+		<type>Weekly </type>
+		<day>Tuesday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Basketball - Women</sportName>
+		<description>Practice </description>
+		<location>Rec Plex </location>
+		<type>Weekly </type>
+		<day>Thursday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Bowling </sportName>
+		<description>Practice</description>
+		<location>Annex</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Bowling </sportName>
+		<description>Practice</description>
+		<location>Annex</location>
+		<type>Weekly</type>
+		<day>Saturday</day>
+		<startTimeHour>1</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>3</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Boxing</sportName>
+		<description>Practice</description>
+		<location>United Community Center Boxing Room</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Boxing</sportName>
+		<description>Practice</description>
+		<location>United Community Center Boxing Room</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Boxing</sportName>
+		<description>Practice</description>
+		<location>Rec Plex Boxing Room</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Curling</sportName>
+		<description>Practice</description>
+		<location>Milwaukee Curling Club (Cedarburg)</location>
+		<type>Weekly</type>
+		<day>Friday</day>
+		<startTimeHour>4</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>6</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Equestrian </sportName>
+		<description>Practice</description>
+		<location>Cedar Creek Equestrian </location>
+		<type>Weekly</type>
+		<day>Sunday </day>
+		<startTimeHour>2</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>3</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Equestrian </sportName>
+		<description>Practice</description>
+		<location>Cedar Creek Equestrian </location>
+		<type>Weekly</type>
+		<day>Tuesday </day>
+		<startTimeHour>4</startTimeHour>
+		<startTimeMinute>000</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>5</endTimeHour>
+		<endTimeMinute>000</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Equestrian </sportName>
+		<description>Practice </description>
+		<location>Cedar Creek Equestrian </location>
+		<type>Weekly </type>
+		<day>Tuesday </day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>000</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>000</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Equestrian </sportName>
+		<description>Practice </description>
+		<location>CedarCedar Creek Equestrian </location>
+		<type>Weekly</type>
+		<day>Wednesday </day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>000</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>000</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Equestrian </sportName>
+		<description>Practice </description>
+		<location>Cedar Creek Equestrian </location>
+		<type>Weekly </type>
+		<day>Thursday </day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>000</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>000</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - Overwatch 2</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>000</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - Overwatch 2</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Saturday</day>
+		<startTimeHour>2</startTimeHour>
+		<startTimeMinute>000</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - Rainbox Six: Siege</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - League of Legends</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - Counter Strike 2</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - Counter Strike 2</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>E-Sports</sportName>
+		<description>Practice - Counter Strike 2</description>
+		<location>Online</location>
+		<type>Weekly</type>
+		<day>Friday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>Fencing</sportName>
+		<description>Practice</description>
+		<location>Humphrey Practice Space</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Fencing</sportName>
+		<description>Practice</description>
+		<location>Humphrey Practice Space</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Fencing</sportName>
+		<description>Practice</description>
+		<location>Humphrey Practice Space</location>
+		<type>Weekly</type>
+		<day>Friday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Field Hockey</sportName>
+		<description>Practice</description>
+		<location>Valley Fields </location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Field Hockey</sportName>
+		<description>Practice</description>
+		<location>Valley Fields </location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Figure Skating</sportName>
+		<description>Practice</description>
+		<location>MSOE Kern Center</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Gymnastics</sportName>
+		<description>Practice</description>
+		<location>Infinite Gymnastics</location>
+		<type>Weekly</type>
+		<day>Saturday</day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ju-Jitsu</sportName>
+		<description>Practice</description>
+		<location>Schroeder Hall Multipurpose Room</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ju-Jitsu</sportName>
+		<description>Practice</description>
+		<location>Schroeder Hall Multipurpose Room</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ju-Jitsu</sportName>
+		<description>Practice</description>
+		<location>Schroeder Hall Multipurpose Room</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Lacrosse - Men</sportName>
+		<description>Practice</description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Lacrosse - Men</sportName>
+		<description>Practice</description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Lacrosse - Women</sportName>
+		<description>Practice</description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Lacrosse - Women</sportName>
+		<description>Practice</description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Log Rolling</sportName>
+		<description>Practice</description>
+		<location>Straz Tower</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Log Rolling</sportName>
+		<description>Practice</description>
+		<location>Straz Tower</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Pickleball </sportName>
+		<description>Practice</description>
+		<location>Rec Plex</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Pickleball </sportName>
+		<description>Practice</description>
+		<location>Rec Plex</location>
+		<type>Weekly</type>
+		<day>Sunday</day>
+		<startTimeHour>4</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>6</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Powerlifting</sportName>
+		<description>Practice</description>
+		<location>Marquette Old Gymnasium</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Powerlifting</sportName>
+		<description>Practice</description>
+		<location>Marquette Old Gymnasium</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Quidditch</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Quidditch</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Rock Climbing</sportName>
+		<description>Practice</description>
+		<location>Turner Hall Climbing Gym</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Rock Climbing</sportName>
+		<description>Practice</description>
+		<location>Turner Hall Climbing Gym</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Non Varsity Rowing</sportName>
+		<description>Practice </description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Monday </day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Non Varsity Rowing</sportName>
+		<description>Practice</description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Wednesday </day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Non Varsity Rowing</sportName>
+		<description>Practice </description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Thursday </day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Non Varsity Rowing  </sportName>
+		<description>Practice</description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day> Friday </day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Varsity Rowing  </sportName>
+		<description>Practice </description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Monday </day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>AM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>AM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Varsity Rowing </sportName>
+		<description>Practice </description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Wednesday </day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>AM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>AM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Varsity Rowing </sportName>
+		<description>Practice </description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Thursday </day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>AM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>AM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Varsity Rowing</sportName>
+		<description>Practice </description>
+		<location>AMU Ballroom Level </location>
+		<type>Weekly</type>
+		<day>Friday </day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>AM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>AM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Rugby - Men</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Rugby - Men</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Rugby - Women</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Rugby - Women</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Running </sportName>
+		<description>Practice </description>
+		<location>SHAMU</location>
+		<type>Weekly </type>
+		<day>Monday </day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>Running </sportName>
+		<description>Practice </description>
+		<location>SHAMU</location>
+		<type>Weekly </type>
+		<day>Tuesday </day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>Running </sportName>
+		<description>Practice</description>
+		<location>SHAMU</location>
+		<type>Weekly </type>
+		<day>Wednesday </day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>Running </sportName>
+		<description>Practice</description>
+		<location>SHAMU</location>
+		<type>Weekly </type>
+		<day>Thursday </day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>Running </sportName>
+		<description>Practice</description>
+		<location>SHAMU</location>
+		<type>Weekly </type>
+		<day>Friday </day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>45</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour/>
+		<endTimeMinute/>
+		<endTimePeriod/>
+	</practice>
+	<practice>
+		<sportName>Sailing</sportName>
+		<description>Practice</description>
+		<location>Milwaukee Yacht Club</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Sailing</sportName>
+		<description>Practice</description>
+		<location>Milwaukee Yacht Club</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Sailing</sportName>
+		<description>Practice</description>
+		<location>Milwaukee Yacht Club</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>3</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Sailing</sportName>
+		<description>Team Meeting</description>
+		<location>Campus Classroom</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Soccer - Men </sportName>
+		<description>Practice </description>
+		<location>Valley Fields</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Soccer- Men</sportName>
+		<description>Practice </description>
+		<location>Valley Fields </location>
+		<type>Weekly </type>
+		<day>Wednesday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Soccer- Women</sportName>
+		<description>Practice</description>
+		<location>Valley Fields Bubble</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Soccer- Women</sportName>
+		<description>Practice</description>
+		<location>Valley Fields Turf</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Softball</sportName>
+		<description>Practice</description>
+		<location>Norris Park </location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Spikeball</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Spikeball</sportName>
+		<description>Practice</description>
+		<location>Norris Park</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Swimming &amp; Diving</sportName>
+		<description>Practice</description>
+		<location>Straz Tower</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>6</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Swimming &amp; Diving</sportName>
+		<description>Practice</description>
+		<location>Straz Tower</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Swimming &amp; Diving</sportName>
+		<description>Practice</description>
+		<location>Straz Tower</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Tae Kwon Do </sportName>
+		<description>Practice </description>
+		<location>Schroeder Hall Multipurpose Room</location>
+		<type>Weekly </type>
+		<day>Tuesday </day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Tae Kwon Do</sportName>
+		<description>Practice</description>
+		<location>Schroeder Hall Multipurpose Room</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Tennis </sportName>
+		<description>Practice </description>
+		<location>Elite Sport Club-NorthShore</location>
+		<type>Weekly</type>
+		<day>Sunday</day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>7</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Tennis </sportName>
+		<description>Practice </description>
+		<location>Elite Sport Club-NorthShore</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Tennis</sportName>
+		<description>Practice </description>
+		<location>Elite Sport Club-NorthShore</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>9</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Triathlon</sportName>
+		<description>Practice - Swim</description>
+		<location>Rec Plex Pool</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>AM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>AM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Triathlon</sportName>
+		<description>Practice - Swim</description>
+		<location>Rec Plex Pool</location>
+		<type>Weekly</type>
+		<day>Tuesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Triathlon</sportName>
+		<description>Practice - Computrainers</description>
+		<location>Cramer 010</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>5</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>6</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Triathlon</sportName>
+		<description>Practice - Swim</description>
+		<location>Rec Plex Pool</location>
+		<type>Weekly</type>
+		<day>Friday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>AM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>AM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ultimate Frisbee - Men</sportName>
+		<description>Practice</description>
+		<location>The Dome</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ultimate Frisbee - Men</sportName>
+		<description>Practice</description>
+		<location>The Dome</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>10</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ultimate Frisbee -Women</sportName>
+		<description>Practice</description>
+		<location>The Dome</location>
+		<type>Weekly</type>
+		<day>Monday</day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Ultimate Frisbee -Women</sportName>
+		<description>Practice</description>
+		<location>The Dome</location>
+		<type>Weekly</type>
+		<day>Wednesday</day>
+		<startTimeHour>10</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>11</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Volleyball - Men </sportName>
+		<description>Practice </description>
+		<location>Cristo Rey High School</location>
+		<type>Weekly</type>
+		<day>Monday </day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Volleyball - Men</sportName>
+		<description>Practice</description>
+		<location>Cristo Rey High School</location>
+		<type>Weekly </type>
+		<day>Wednesday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>10</endTimeHour>
+		<endTimeMinute>00</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Volleyball - Men</sportName>
+		<description>Practice </description>
+		<location>Cristo Rey High School</location>
+		<type>Weekly </type>
+		<day>Monday </day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Volleyball - Women</sportName>
+		<description>Practice</description>
+		<location>Cristo Rey High School</location>
+		<type>Weekly </type>
+		<day>Wednesday </day>
+		<startTimeHour>7</startTimeHour>
+		<startTimeMinute>00</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>8</endTimeHour>
+		<endTimeMinute>30</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+	<practice>
+		<sportName>Water polo</sportName>
+		<description>Practice</description>
+		<location>Rec Plex Pool</location>
+		<type>Weekly</type>
+		<day>Thursday</day>
+		<startTimeHour>8</startTimeHour>
+		<startTimeMinute>30</startTimeMinute>
+		<startTimePeriod>PM</startTimePeriod>
+		<endTimeHour>9</endTimeHour>
+		<endTimeMinute>45</endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
+	</practice>
+</dataset>
