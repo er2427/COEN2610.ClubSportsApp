@@ -45,4 +45,8 @@
         android:name="com.example.clubsportsappnew.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_calendar"
         tools:layout="@layout/fragment_slideshow" />
+<!--        <action-->
+<!--            android:id="@+id/action_nav_to_filter"-->
+<!--            app:destination="@+id/nav_admin" />-->
+<!--    this will need to be added eventually-->
 </navigation>

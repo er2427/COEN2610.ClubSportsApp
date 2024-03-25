@@ -51,13 +51,13 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
         Button favorite_button = holder.itemView.findViewById(R.id.favorite_button); // Change to your actual ID
         favorite_button.setOnClickListener(view -> {
             Versions currentVersion = versionsList.get(position);
-            currentVersion.setFavorite(!currentVersion.isFavorite());
+            currentVersion.setFavorite(!currentVersion.getFavorite());
             updateStarIcon(currentVersion, favorite_button); // Update the star visually
         });
         updateStarIcon(versionsList.get(position), favorite_button);
     }
     private void updateStarIcon(Versions version, Button favorite_button) {
-        if (version.isFavorite()) {
+        if (version.getFavorite()) {
             favorite_button.setBackgroundResource(R.drawable.menu_favorites_fill); // Use your filled star drawable
         } else {
             favorite_button.setBackgroundResource(R.drawable.menu_favorites); // Use your hollow star drawable
