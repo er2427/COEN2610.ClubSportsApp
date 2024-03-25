@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CalendMain">
+    tools:context=".CalendarMain">
 
     <Button
         android:layout_width="wrap_content"
@@ -30,12 +30,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@null"
-            android:onClick="previousMonthAction"
             android:text="<-"
             android:textColor="@color/marquette_blue"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:background="@null"
+            android:textStyle="bold"
+            android:onClick="previousMonthAction"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/monthYearTV"
@@ -61,7 +61,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -136,24 +135,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendarRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Event"
-        android:textColor="@color/marquette_blue"
-        android:background="@null"
-        android:textStyle="bold"
-        android:onClick="newEventAction"
-        android:layout_gravity="center"
-        android:textSize="20sp"/>
-
-    <ListView
-        android:id="@+id/eventListView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5"/>
 </LinearLayout>
 

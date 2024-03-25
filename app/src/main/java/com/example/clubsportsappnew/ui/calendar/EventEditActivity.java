@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.example.clubsportsappnew.R;
 
 import java.time.LocalTime;
 public class EventEditActivity extends AppCompatActivity
@@ -22,8 +23,8 @@ public class EventEditActivity extends AppCompatActivity
         setContentView(R.layout.activity_event_edit);
         initWidgets();
         time = LocalTime.now();
-        eventDateTV.setText("Date: " + CalendarUtils.formattedDate(CalendarUtils.selectedDate));
-        eventTimeTV.setText("Time: " + CalendarUtils.formattedTime(time));
+        eventDateTV.setText(String.format("Date: %s", CalendarUtils.formattedDate(CalendarUtils.selectedDate)));
+        eventTimeTV.setText(String.format("Time: %s", CalendarUtils.formattedTime(time)));
     }
 
     private void initWidgets()

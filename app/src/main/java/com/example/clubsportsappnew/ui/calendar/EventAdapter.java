@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import com.example.clubsportsappnew.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,11 +26,12 @@ public class EventAdapter extends ArrayAdapter<Event>
         Event event = getItem(position);
 
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext().inflate(R.layout.event_cell, parent, false);}
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.event_cell, parent, false);}
 
         TextView eventCellTV = convertView.findViewById(R.id.eventCellTV);
 
         String eventTitle = event.getName() +" "+ CalendarUtils.formattedTime(event.getTime());
+        eventCellTV.setText(eventTitle);
         return convertView;
     }
 }

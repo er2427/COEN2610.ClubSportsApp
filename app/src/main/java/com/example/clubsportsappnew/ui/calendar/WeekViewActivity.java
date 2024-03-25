@@ -1,5 +1,8 @@
 package com.example.clubsportsappnew.ui.calendar;
 
+import static com.example.clubsportsappnew.ui.calendar.CalendarUtils.monthYearFromDate;
+import static com.example.clubsportsappnew.ui.calendar.CalendarUtils.daysInWeekArray;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +13,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.clubsportsappnew.R;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -45,7 +49,7 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(), 7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
-        setEventAdpater();
+        setEventAdapter();
     }
 
 
@@ -72,7 +76,7 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
     protected void onResume()
     {
         super.onResume();
-        setEventAdpater();
+        setEventAdapter();
     }
 
     private void setEventAdapter()

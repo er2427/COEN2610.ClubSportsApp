@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 public class Event
 {
-    public static ArrayList<Event> eventslist = new ArrayList<>();
+    public static ArrayList<Event> eventsList = new ArrayList<>();
     public static ArrayList<Event> eventsForDate(LocalDate date)
     {
         ArrayList<Event> events = new ArrayList<>();
