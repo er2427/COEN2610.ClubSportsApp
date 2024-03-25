@@ -1,6 +1,9 @@
 package com.example.clubsportsappnew.ui.home;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,28 +39,44 @@ public class FavoritesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Here is where we will filter on fragments
-
         // Initialize RecyclerView
         recyclerView = view.findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
+        // Set up RecyclerView adapter
+        versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
+        recyclerView.setAdapter(versionsAdapter);
+
         // Initialize data
         initData();
         SetRecyclerView();
-
-        // Set up RecyclerView adapter
-        versionsAdapter = new VersionsAdapter(versionsList); // Use the class-level variable
-        recyclerView.setAdapter(versionsAdapter);
     }
 
     private void SetRecyclerView() {
-        VersionsAdapter versionsAdapter = new VersionsAdapter(versionsList);
+        VersionsAdapter versionsAdapter = new VersionsAdapter(versionsList, requireContext());
         recyclerView.setAdapter(versionsAdapter);
         recyclerView.setHasFixedSize(true);
     }
     private void initData() {
-        versionsList = SportXmlParser.parseSports(requireContext());
+        // Initialize versionsList
+        versionsList = new ArrayList<>();
+
+        // Load all versions
+        List<Versions> allVersions = SportXmlParser.parseSports(requireContext());
+
+        // Initialize SharedPreferences
+        SharedPreferences sharedPreferences = requireContext().getSharedPreferences("FavoritePrefs", Context.MODE_PRIVATE);
+
+        // Load favorite states from SharedPreferences and update versionsList accordingly
+        for (Versions version : allVersions) {
+            boolean favorite = sharedPreferences.getBoolean(version.getclubName(), false);
+            version.setFavorite(favorite);
+            if (favorite) {
+                versionsList.add(version);
+            }
+            Log.d("FavoritesFragment", "Club: " + version.getclubName() + ", Favorite: " + favorite);
+        }
     }
+
 }
 

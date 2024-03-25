@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Define top-level destinations (those that don't have Up button in the app bar)
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_slideshow, R.id.nav_favorites)
+                R.id.nav_home, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
 

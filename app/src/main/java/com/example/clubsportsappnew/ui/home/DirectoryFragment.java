@@ -1,6 +1,7 @@
 package com.example.clubsportsappnew.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,13 +59,13 @@ public class DirectoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
+        // Set up RecyclerView adapter
+        versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
+        recyclerView.setAdapter(versionsAdapter);
+
         // Initialize data
         initData();
         SetRecyclerView();
-
-        // Set up RecyclerView adapter
-        versionsAdapter = new VersionsAdapter(versionsList); // Use the class-level variable
-        recyclerView.setAdapter(versionsAdapter);
     }
 
 
@@ -85,12 +86,23 @@ public class DirectoryFragment extends Fragment {
     }
 
     private void SetRecyclerView() {
-        VersionsAdapter versionsAdapter = new VersionsAdapter(versionsList);
+        VersionsAdapter versionsAdapter = new VersionsAdapter(versionsList, requireContext());
         recyclerView.setAdapter(versionsAdapter);
         recyclerView.setHasFixedSize(true);
     }
     private void initData() {
         versionsList = SportXmlParser.parseSports(requireContext());
+
+        // Log the size of the versionsList
+        Log.d("DirectoryFragment", "Versions list size: " + versionsList.size());
+
+        // Load favorite states from SharedPreferences and update versionsList accordingly
+        for (Versions version : versionsList) {
+            boolean favorite = versionsAdapter.loadFavoriteState(version.getclubName());
+            version.setFavorite(favorite);
+            Log.d("DirectoryFragment", "Club: " + version.getclubName() + ", Favorite: " + favorite);
+        }
     }
+
 }
 
