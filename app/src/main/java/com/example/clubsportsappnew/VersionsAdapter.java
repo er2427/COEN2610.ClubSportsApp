@@ -47,6 +47,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
         boolean isExpandable = versionsList.get(position).isExpandable();
         holder.expandableLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
 
+        // Clicking button in directory fragment
         Button favorite_button = holder.itemView.findViewById(R.id.favorite_button); // Change to your actual ID
         favorite_button.setOnClickListener(view -> {
             Versions currentVersion = versionsList.get(position);
