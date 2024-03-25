@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="text_directory" type="id" />
+    <item name="text_favorites" type="id" />
     <item name="action_nav_teams_to_directoryFragment" type="id"/>
     <item name="action_nav_to_filter" type="id" />
     <item name="nav_favorites" type="id" />
+    <item name="nav_home" type="id" />
 </resources>

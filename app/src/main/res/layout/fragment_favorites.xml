@@ -9,7 +9,7 @@
     tools:context=".ui.home.FavoritesFragment">
 
     <TextView
-        android:id="@+id/text_directory"
+        android:id="@+id/text_favorites"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
