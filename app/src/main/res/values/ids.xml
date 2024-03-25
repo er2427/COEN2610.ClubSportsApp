@@ -6,4 +6,13 @@
     <item name="action_nav_to_filter" type="id" />
     <item name="nav_favorites" type="id" />
     <item name="nav_home" type="id" />
+    <item name="action_nav_to_logout" type="id"/>
+    <item name="username" type="id" />
+    <item name="password" type="id" />
+    <item name="email" type="id" />
+    <item name="confirmPassword" type="id" />
+    <item name="firstName" type="id" />
+    <item name="lastName" type="id" />
+    <item name="signUpPassword" type="id" />
+    <item name="signUpUsername" type="id" />
 </resources>

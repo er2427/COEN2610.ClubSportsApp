@@ -26,5 +26,10 @@
             android:icon="@drawable/menu_admin"
             android:title="@string/menu_admin"
             />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/key_outline"
+            android:title="Logout"
+            />
     </group>
 </menu>
