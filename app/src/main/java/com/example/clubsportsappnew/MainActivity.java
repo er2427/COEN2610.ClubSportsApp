@@ -1,10 +1,19 @@
 package com.example.clubsportsappnew;
 
+import static com.example.clubsportsappnew.ui.calendar.CalendarUtils.daysInMonthArray;
+import static com.example.clubsportsappnew.ui.calendar.CalendarUtils.monthYearFromDate;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
+import android.widget.TextView;
 
+import com.example.clubsportsappnew.ui.calendar.CalendarAdapter;
+import com.example.clubsportsappnew.ui.calendar.CalendarUtils;
+import com.example.clubsportsappnew.ui.calendar.WeekViewActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -15,6 +24,13 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.time.LocalDate;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 import com.example.clubsportsappnew.databinding.ActivityMainBinding;
 
@@ -64,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
                     navController.navigate(R.id.directoryFragment);
                     drawer.closeDrawers(); // Close the drawer after navigation
                     return true;
-                }
-                else if (id == R.id.nav_admin) {
+                } else if (id == R.id.nav_admin) {
                     navController.navigate(R.id.nav_admin);
                     drawer.closeDrawers();
                     return true;
