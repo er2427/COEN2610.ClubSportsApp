@@ -75,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
                     drawer.closeDrawers(); // Close the drawer after navigation
                     return true;
                 }
+                else if (id == R.id.nav_favorites) {
+                    navController.navigate(R.id.nav_favorites);
+                    drawer.closeDrawers(); // Close the drawer after navigation
+                    return true;
+                }
                 else if (id == R.id.nav_admin) {
                     navController.navigate(R.id.nav_admin);
                     drawer.closeDrawers();

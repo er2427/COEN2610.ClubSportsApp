@@ -4,16 +4,16 @@ public class Versions {
 
     private String clubName, President, Semester, Email, description;
     private boolean expandable;
+    private boolean favorite;
 
     public boolean isExpandable() {
         return expandable;
     }
-
     public void setExpandable(boolean expandable) {
         this.expandable = expandable;
     }
 
-    public Versions(String clubName, String President, String Semester, String Email, String description) {
+    public Versions(String clubName, String President, String Semester, String Email, String description, boolean favorite) {
         this.clubName = clubName;
         this.President = President;
         this.Semester = Semester;
@@ -24,7 +24,7 @@ public class Versions {
 
     // Add a constructor with default description value
     public Versions() {
-        this("", "", "", "", ""); // Set default description to an empty string
+        this("", "", "", "", "", false); // Set default description to an empty string
     }
 
     public String getclubName() { return clubName; }
@@ -57,6 +57,12 @@ public class Versions {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+    public boolean getFavorite(){
+        return favorite;
+    }
+    public void setFavorite(boolean favorite){
+        this.favorite = favorite;
     }
 
     @Override
