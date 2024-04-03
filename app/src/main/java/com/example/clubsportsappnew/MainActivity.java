@@ -84,11 +84,6 @@ public class MainActivity extends AppCompatActivity {
                     drawer.closeDrawers();
                     return true;
                 }
-                else if (id == R.id.nav_admin) {
-                    navController.navigate(R.id.nav_admin);
-                    drawer.closeDrawers();
-                    return true;
-                }
                 else if (id == R.id.nav_logout) {
                     SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
