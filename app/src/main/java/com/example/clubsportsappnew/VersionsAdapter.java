@@ -2,7 +2,6 @@ package com.example.clubsportsappnew;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +9,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.clubsportsappnew.Versions;
 
 import java.util.List;
 
@@ -96,8 +96,8 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
         public VersionVH(@NonNull View itemView) {
             super(itemView);
 
-            clubNameTxt = itemView.findViewById(R.id.code_name);
-            PresidentTxt = itemView.findViewById(R.id.version);
+            clubNameTxt = itemView.findViewById(R.id.event_name);
+            PresidentTxt = itemView.findViewById(R.id.date);
             EmailTxt = itemView.findViewById(R.id.contact);
             SemesterTxt = itemView.findViewById(R.id.api_level);
             descriptionTxt = itemView.findViewById(R.id.description);

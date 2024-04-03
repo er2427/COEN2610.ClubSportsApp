@@ -63,4 +63,11 @@
 
 <!--   This is where events will go-->
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CalendarRecyclerView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
 </LinearLayout>

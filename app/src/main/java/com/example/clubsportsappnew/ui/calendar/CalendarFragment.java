@@ -2,6 +2,7 @@ package com.example.clubsportsappnew.ui.calendar;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clubsportsappnew.R;
+import com.example.clubsportsappnew.Versions;
 import com.example.clubsportsappnew.VersionsAdapter;
 import com.example.clubsportsappnew.ui.home.SportXmlParser;
 import com.google.android.material.chip.Chip;
@@ -29,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class CalendarFragment extends Fragment {
@@ -37,6 +40,9 @@ public class CalendarFragment extends Fragment {
     ArrayAdapter<String> adapterItems;
     ChipGroup chipGroup;
     Set<String> selectedItems = new HashSet<>();
+    private List<Event> eventList;
+    private EventAdapter eventAdapter;
+    private RecyclerView recyclerView;
 
     @Nullable
     @Override
@@ -82,20 +88,49 @@ public class CalendarFragment extends Fragment {
 
         CalendarView calendarView = view.findViewById(R.id.calendarView);
 
+        recyclerView = view.findViewById(R.id.CalendarRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+
+        // Initialize data
+        initData();
+        SetRecyclerView();
+
+        // Set up RecyclerView adapter
+        eventAdapter = new EventAdapter(eventList, requireContext()); // Use the class-level variable
+        recyclerView.setAdapter(eventAdapter);
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
 
                 // This is where you'll display events based on date
+                // Create a Calendar instance for the selected date
+                Calendar selectedDate = Calendar.getInstance();
+                selectedDate.set(year, month, dayOfMonth);
+                selectedDate.set(Calendar.HOUR_OF_DAY, 0);
+                selectedDate.set(Calendar.MINUTE, 0);
+                selectedDate.set(Calendar.SECOND, 0);
+                selectedDate.set(Calendar.MILLISECOND, 0);
 
+                // Filter the eventList to only include events that occur on the selected date
+                List<Event> filteredEvents = new ArrayList<>();
+                for (Event event : eventList) {
+                    Calendar eventDate = event.getDateCalendar();
+                    eventDate.set(Calendar.HOUR_OF_DAY, 0);
+                    eventDate.set(Calendar.MINUTE, 0);
+                    eventDate.set(Calendar.SECOND, 0);
+                    eventDate.set(Calendar.MILLISECOND, 0);
+                    if (eventDate.equals(selectedDate)) {
+                        filteredEvents.add(event);
+                    }
+                }
 
-                // Use Calendar class to create a Date object
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(year, month, dayOfMonth);
-                Date date = calendar.getTime();
+                // Update the RecyclerView adapter with the filtered list of events
+                eventAdapter = new EventAdapter(filteredEvents, requireContext());
+                recyclerView.setAdapter(eventAdapter);
 
                 // Display the date in a Toast
-                Toast.makeText(requireContext(), date.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(requireContext(), date.toString(), Toast.LENGTH_SHORT).show();
             }
         }); // Add closing parenthesis and semicolon here
     }
@@ -113,6 +148,20 @@ public class CalendarFragment extends Fragment {
         });
 
         chipGroup.addView(chip);
+    }
+
+    private void SetRecyclerView() {
+        EventAdapter eventAdapter = new EventAdapter(eventList, requireContext());
+        recyclerView.setAdapter(eventAdapter);
+        recyclerView.setHasFixedSize(true);
+    }
+    private void initData() {
+          eventList = PracticeParser.parsePractices(requireContext());
+//        eventList = new ArrayList<>();
+//        eventList.add(new Event("Event 1", "Soccer", "tbd", "tbd", Calendar.getInstance(), Calendar.getInstance()));
+//        eventList.add(new Event("Event 2", "Basketball", "tbd", "tbd", Calendar.getInstance(), Calendar.getInstance()));
+//        eventList.add(new Event("Event 3", "Football", "tbd", "tbd", Calendar.getInstance(), Calendar.getInstance()));
+//        eventList.add(new Event("Event 4", "Baseball", "tbd", "tbd", Calendar.getInstance(), Calendar.getInstance()));
     }
 
 }
