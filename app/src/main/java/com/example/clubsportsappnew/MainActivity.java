@@ -1,7 +1,6 @@
 package com.example.clubsportsappnew;
 
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Define top-level destinations (those that don't have Up button in the app bar)
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_slideshow)
+                R.id.nav_home)
                 .setOpenableLayout(drawer)
                 .build();
 
@@ -78,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 else if (id == R.id.nav_favorites) {
                     navController.navigate(R.id.nav_favorites);
                     drawer.closeDrawers(); // Close the drawer after navigation
+                    return true;
+                }
+                else if (id == R.id.nav_calendar) {
+                    navController.navigate(R.id.nav_calendar);
+                    drawer.closeDrawers();
                     return true;
                 }
                 else if (id == R.id.nav_admin) {
