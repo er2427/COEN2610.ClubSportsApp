@@ -120,7 +120,7 @@ public class CalendarFragment extends Fragment {
                     eventDate.set(Calendar.MINUTE, 0);
                     eventDate.set(Calendar.SECOND, 0);
                     eventDate.set(Calendar.MILLISECOND, 0);
-                    if (eventDate.equals(selectedDate)) {
+                    if (eventDate.equals(selectedDate) && selectedItems.contains(event.getSport())) {
                         filteredEvents.add(event);
                     }
                 }

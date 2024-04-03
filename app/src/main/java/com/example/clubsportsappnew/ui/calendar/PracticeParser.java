@@ -88,11 +88,33 @@ public class PracticeParser {
     }
 
     private static Calendar getNextDayOfWeek(String dayOfWeek) {
-        String[] days = new String[]{"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-        int dayIndex = Arrays.asList(days).indexOf(dayOfWeek);
+        int day = 0;
+        switch (dayOfWeek.toLowerCase()) {
+            case "sunday":
+                day = Calendar.SUNDAY;
+                break;
+            case "monday":
+                day = Calendar.MONDAY;
+                break;
+            case "tuesday":
+                day = Calendar.TUESDAY;
+                break;
+            case "wednesday":
+                day = Calendar.WEDNESDAY;
+                break;
+            case "thursday":
+                day = Calendar.THURSDAY;
+                break;
+            case "friday":
+                day = Calendar.FRIDAY;
+                break;
+            case "saturday":
+                day = Calendar.SATURDAY;
+                break;
+        }
 
         Calendar date = Calendar.getInstance();
-        int diff = dayIndex - date.get(Calendar.DAY_OF_WEEK);
+        int diff = day - date.get(Calendar.DAY_OF_WEEK);
         if (diff <= 0) {
             diff += 7;
         }
