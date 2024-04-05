@@ -43,12 +43,13 @@ public class FavoritesFragment extends Fragment {
         recyclerView = view.findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
+        initData();
+
         // Set up RecyclerView adapter
         versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
         recyclerView.setAdapter(versionsAdapter);
 
         // Initialize data
-        initData();
         SetRecyclerView();
     }
 

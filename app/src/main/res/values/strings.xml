@@ -16,5 +16,9 @@
     <string name="spinner_description">Filter by Sport</string>
     <string name="team_choice_description">Choose a Team</string>
 
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="fakemonth">April 2024</string>
+
     <string name="logo_content_description">This is the Marquette logo</string>
 </resources>
