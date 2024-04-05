@@ -10,7 +10,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".ui.home.LoginPage">
+    tools:context=".ui.home.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -52,7 +52,7 @@
                 android:background="@color/marquette_gold"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
-                android:hint="Username"
+                android:hint="Email"
                 android:padding="8dp"
                 android:textColor="@color/marquette_blue"
                 android:textColorHighlight="@color/cardview_dark_background" />
