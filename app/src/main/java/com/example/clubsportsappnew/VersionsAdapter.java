@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clubsportsappnew.Versions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.VersionVH> {
@@ -25,9 +26,10 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
     List<Versions> versionsList;
 
     public VersionsAdapter(List<Versions> versionsList, Context context) {
-        this.versionsList = versionsList;
+        this.versionsList = new ArrayList<>(versionsList);
         this.sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
     }
+
 
     public void setFilteredList(List<Versions> versionsList) {
         this.versionsList = versionsList;

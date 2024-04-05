@@ -59,12 +59,13 @@ public class DirectoryFragment extends Fragment {
         recyclerView = view.findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
+        initData();
+
         // Set up RecyclerView adapter
         versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
         recyclerView.setAdapter(versionsAdapter);
 
         // Initialize data
-        initData();
         SetRecyclerView();
     }
 
@@ -92,6 +93,10 @@ public class DirectoryFragment extends Fragment {
     }
     private void initData() {
         versionsList = SportXmlParser.parseSports(requireContext());
+
+        // Initialize VersionsAdapter before using it
+        versionsAdapter = new VersionsAdapter(versionsList, requireContext());
+
 
         // Log the size of the versionsList
         Log.d("DirectoryFragment", "Versions list size: " + versionsList.size());

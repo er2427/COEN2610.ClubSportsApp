@@ -25,7 +25,11 @@ public class PracticeParser {
             XmlResourceParser parser = resources.getXml(R.xml.practice_times);
 
             Calendar endDate = Calendar.getInstance();
-            endDate.set(2024, Calendar.MAY, 15);
+            endDate.set(2024, Calendar.MAY, 15, 23, 59, 59);
+
+            // Set the start date to January 16th, 2024
+            Calendar startDate = Calendar.getInstance();
+            startDate.set(2024, Calendar.JANUARY, 16);
 
             int eventType = parser.getEventType();
             Event currentEvent = null;
@@ -36,7 +40,7 @@ public class PracticeParser {
                     case XmlPullParser.START_TAG:
                         if ("practice".equals(parser.getName())) {
                             currentEvent = new Event();
-                            startTime = Calendar.getInstance();
+                            startTime = (Calendar) startDate.clone();
                         } else if (currentEvent != null) {
                             if ("sportName".equals(parser.getName())) {
                                 currentEvent.setSport(parser.nextText());
@@ -46,7 +50,7 @@ public class PracticeParser {
                                 currentEvent.setLocation(parser.nextText());
                             } else if ("day".equals(parser.getName())) {
                                 String dayOfWeek = parser.nextText();
-                                startTime = getNextDayOfWeek(dayOfWeek);
+                                startTime = getNextDayOfWeek(dayOfWeek, startDate);
                             } else if ("type".equals(parser.getName())) {
                                 currentEvent.setType(parser.nextText());
                             } else if ("startTimeHour".equals(parser.getName())) {
@@ -87,7 +91,7 @@ public class PracticeParser {
         return eventList;
     }
 
-    private static Calendar getNextDayOfWeek(String dayOfWeek) {
+    private static Calendar getNextDayOfWeek(String dayOfWeek, Calendar startDate) {
         int day = 0;
         switch (dayOfWeek.toLowerCase()) {
             case "sunday":
@@ -113,13 +117,12 @@ public class PracticeParser {
                 break;
         }
 
-        Calendar date = Calendar.getInstance();
-        int diff = day - date.get(Calendar.DAY_OF_WEEK);
-        if (diff <= 0) {
-            diff += 7;
-        }
+        Calendar date = (Calendar) startDate.clone();
+        date.set(Calendar.DAY_OF_WEEK, day);
 
-        date.add(Calendar.DAY_OF_MONTH, diff);
+        if (date.before(startDate)) {
+            date.add(Calendar.WEEK_OF_YEAR, 1);
+        }
         return date;
     }
     public static ArrayList<String> parseSportNamesFromPractices(Context context) {

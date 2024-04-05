@@ -15,6 +15,7 @@ public class Event
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
     private SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a", Locale.US);
 
+    // Main Constructor for Event
     public Event(String name, String sport, String location, String type, Calendar date, Calendar time)
     {
         this.name = name;
@@ -29,6 +30,7 @@ public class Event
         this("", "", "", "", Calendar.getInstance(), Calendar.getInstance()); // Set default description to an empty string
     }
 
+    // Creating Dummy event object
     public Event(Event other) {
         this.name = other.name;
         this.sport = other.sport;
