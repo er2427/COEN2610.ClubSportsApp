@@ -19,11 +19,11 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/code_name"
+                android:id="@+id/clubName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Code Name"
+                android:text="Club Name"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
 
@@ -46,24 +46,29 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/version"
+                android:id="@+id/president"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Version"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingVertical="4dp"
+                android:text="President"
+                android:textColor="@color/marquette_blue"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/api_level"
+                android:id="@+id/contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:padding="16dp"
-                android:text="Api Level"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_below="@id/president"
+                android:layout_marginTop="0dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingVertical="4dp"
+                android:text="Contact Info"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/description"
@@ -71,19 +76,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/contact"
                 android:layout_marginTop="0dp"
-                android:padding="16dp"
-                android:text="Description TextView"
-                android:textSize="18sp" />
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingVertical="4dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/version"
-                android:layout_marginTop="0dp"
-                android:padding="16dp"
-                android:text="TextView"
-                android:textSize="18sp" />
+            <RelativeLayout
+                android:id="@+id/practice_times_container"
+                android:layout_below="@id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </RelativeLayout>
+
 
         </RelativeLayout>
 

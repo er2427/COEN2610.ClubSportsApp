@@ -1,10 +1,15 @@
 package com.example.clubsportsappnew;
 
+import com.example.clubsportsappnew.ui.Practice;
+
+import java.util.List;
+
 public class Versions {
 
-    private String clubName, President, Semester, Email, description;
+    private String clubName, President, Email, description;
     private boolean expandable;
     private boolean favorite;
+    private List<Practice> practices;
 
     public boolean isExpandable() {
         return expandable;
@@ -13,10 +18,9 @@ public class Versions {
         this.expandable = expandable;
     }
 
-    public Versions(String clubName, String President, String Semester, String Email, String description, boolean favorite) {
+    public Versions(String clubName, String President, String Email, String description, boolean favorite) {
         this.clubName = clubName;
         this.President = President;
-        this.Semester = Semester;
         this.Email = Email;
         this.description = description;
         this.expandable = false;
@@ -24,7 +28,7 @@ public class Versions {
 
     // Add a constructor with default description value
     public Versions() {
-        this("", "", "", "", "", false); // Set default description to an empty string
+        this("", "", "", "Practice Information", false); // Set default description to an empty string
     }
 
     public String getclubName() { return clubName; }
@@ -39,14 +43,6 @@ public class Versions {
 
     public void setPresident(String President) { this.President = President; }
 
-    public String getSemester() {
-        return Semester;
-    }
-
-    public void setSemester(String Semester) {
-        this.Semester = Semester;
-    }
-
     public String getEmail() { return Email; }
 
     public void setEmail(String Email) { this.Email = Email; }
@@ -54,15 +50,22 @@ public class Versions {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-    public boolean getFavorite(){
+
+    public boolean getFavorite() {
         return favorite;
     }
-    public void setFavorite(boolean favorite){
+    public void setFavorite(boolean favorite) {
         this.favorite = favorite;
+    }
+
+    public List<Practice> getPractices() {
+        return practices;
+    }
+    public void setPractices(List<Practice> practices) {
+        this.practices = practices;
     }
 
     @Override
@@ -70,9 +73,6 @@ public class Versions {
         return "Presidents{" +
                 "clubName='" + clubName + '\'' +
                 ", President='" + President + '\'' +
-                ", Semester='" + Semester + '\'' +
-                ", Email = '" + Email + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+                ", Email = '" + Email;
     }
 }

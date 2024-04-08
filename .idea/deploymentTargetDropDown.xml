@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="SignUpPage">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -10,12 +13,12 @@
               <deviceKey>
                 <Key>
                   <type value="VIRTUAL_DEVICE_PATH" />
-                  <value value="C:\Users\bekka\.android\avd\Copy_of_Pixel_3a_API_34_extension_level_7_x86_64.avd" />
+                  <value value="C:\Users\paige\.android\avd\Pixel_6a_API_UpsideDownCakePrivacySandbox.avd" />
                 </Key>
               </deviceKey>
             </Target>
           </targetSelectedWithDropDown>
-          <timeTargetWasSelectedWithDropDown value="2024-03-08T07:32:03.364515300Z" />
+          <timeTargetWasSelectedWithDropDown value="2024-04-08T00:11:50.023065100Z" />
         </State>
       </entry>
     </value>
