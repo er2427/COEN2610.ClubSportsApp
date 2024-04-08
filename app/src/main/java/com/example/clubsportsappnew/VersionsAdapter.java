@@ -76,6 +76,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
             int currentPracticeId = View.generateViewId();
             practiceTimeView.setId(currentPracticeId);
 
+            //this is checking to see if there's already a practice and if there is, it will set the current practice below the previous one
             if(previousPracticeId != -1){
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                         RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -84,6 +85,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
                 params.addRule(RelativeLayout.BELOW, previousPracticeId);
                 practiceTimeView.setLayoutParams(params);
             }
+            //setting the text views to the correct values
             TextView dayTextView = practiceTimeView.findViewById(R.id.day);
             TextView startHourTextView = practiceTimeView.findViewById(R.id.startHour);
             TextView startMinuteTextView = practiceTimeView.findViewById(R.id.startMinute);
@@ -92,6 +94,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
             TextView endPeriodTextView = practiceTimeView.findViewById(R.id.endPeriod);
             TextView locationTextView = practiceTimeView.findViewById(R.id.location);
 
+            //setting the text views to the correct values
             dayTextView.setText(practice.getDay());
             startHourTextView.setText(practice.getStartTimeHour());
             startMinuteTextView.setText(practice.getStartTimeMinute());
@@ -100,6 +103,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
             endPeriodTextView.setText(practice.getEndTimePeriod());
             locationTextView.setText(practice.getLocation());
             //if the sport doesn't have a practice, make it so nothing shows
+            //also gets rid of the "Practice Information" text
             if(practice.getDay() == null || practice.getDay().isEmpty()){
                 dayTextView.setVisibility(View.GONE);
             }
@@ -161,7 +165,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
         public VersionVH(@NonNull View itemView) {
             super(itemView);
-
+            //setting the text views to the correct values
             clubNameTxt = itemView.findViewById(R.id.clubName);
             PresidentTxt = itemView.findViewById(R.id.president);
 
@@ -179,6 +183,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
             practice_times_container = itemView.findViewById(R.id.practice_times_container);
 
+            // Clicking the sport in directory fragment
             linearLayout.setOnClickListener((View v) -> {
                 int position = getAbsoluteAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
