@@ -13,7 +13,7 @@
     <string name="menu_teams">Club Sports Directory</string>
     <string name="menu_calendar">Calendar</string>
     <string name="menu_admin">Admin</string>
-    <string name="spinner_description">Filter by Sport</string>
+    <string name="spinner_description">Select a Sport to See Practices</string>
     <string name="team_choice_description">Choose a Team</string>
 
     <string name="back">Back</string>

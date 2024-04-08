@@ -43,37 +43,21 @@ public class DirectoryFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        recyclerView.setVisibility(View.GONE); // Initially hide RecyclerView
 
         searchView = view.findViewById(R.id.searchView);
 
-        initData(); // Move initData() call before setupSearchView()
+        initData();
+
+        // Set up RecyclerView adapter
+        versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
+        recyclerView.setAdapter(versionsAdapter);
+
+        // Initialize data
+        SetRecyclerView();
 
         setupSearchView();
     }
 
-    @SuppressLint("StaticFieldLeak")
-    private void initData() {
-        versionsList = new ArrayList<>();
-        versionsAdapter = new VersionsAdapter(versionsList, requireContext());
-        recyclerView.setAdapter(versionsAdapter);
-
-        // Fetch data asynchronously
-        new AsyncTask<Void, Void, List<Versions>>() {
-            @Override
-            protected List<Versions> doInBackground(Void... voids) {
-                return SportXmlParser.parseSports(requireContext());
-            }
-
-            @Override
-            protected void onPostExecute(List<Versions> result) {
-                versionsList.clear();
-                versionsList.addAll(result);
-                versionsAdapter.notifyDataSetChanged();
-                recyclerView.setVisibility(View.VISIBLE); // Show RecyclerView after data is loaded
-            }
-        }.execute();
-    }
 
     private void setupSearchView() {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -91,18 +75,6 @@ public class DirectoryFragment extends Fragment {
 
         searchView.clearFocus();
 
-        // Initialize RecyclerView - Elise's code
-        recyclerView = view.findViewById(R.id.RecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-
-        initData();
-
-        // Set up RecyclerView adapter
-        versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
-        recyclerView.setAdapter(versionsAdapter);
-
-        // Initialize data
-        SetRecyclerView();
     }
 
     private void filterList(String text) {
