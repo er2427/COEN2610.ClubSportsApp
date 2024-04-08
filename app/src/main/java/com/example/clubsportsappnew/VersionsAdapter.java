@@ -2,7 +2,6 @@ package com.example.clubsportsappnew;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +9,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clubsportsappnew.ui.Practice;
 
+import com.example.clubsportsappnew.Versions;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.VersionVH> {
@@ -27,9 +28,10 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
 
     public VersionsAdapter(List<Versions> versionsList, Context context) {
-        this.versionsList = versionsList;
+        this.versionsList = new ArrayList<>(versionsList);
         this.sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
     }
+
 
     public void setFilteredList(List<Versions> versionsList) {
         this.versionsList = versionsList;
@@ -162,6 +164,7 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
             clubNameTxt = itemView.findViewById(R.id.clubName);
             PresidentTxt = itemView.findViewById(R.id.president);
+
             EmailTxt = itemView.findViewById(R.id.contact);
             descriptionTxt = itemView.findViewById(R.id.description);
             dayTextView = itemView.findViewById(R.id.day);

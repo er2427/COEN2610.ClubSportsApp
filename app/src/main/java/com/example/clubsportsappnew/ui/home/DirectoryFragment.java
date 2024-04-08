@@ -90,6 +90,19 @@ public class DirectoryFragment extends Fragment {
         });
 
         searchView.clearFocus();
+
+        // Initialize RecyclerView - Elise's code
+        recyclerView = view.findViewById(R.id.RecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+
+        initData();
+
+        // Set up RecyclerView adapter
+        versionsAdapter = new VersionsAdapter(versionsList, requireContext()); // Use the class-level variable
+        recyclerView.setAdapter(versionsAdapter);
+
+        // Initialize data
+        SetRecyclerView();
     }
 
     private void filterList(String text) {
@@ -105,6 +118,31 @@ public class DirectoryFragment extends Fragment {
             versionsAdapter.setFilteredList(filteredList);
         }
     }
+
+//elise's code
+    private void SetRecyclerView() {
+        VersionsAdapter versionsAdapter = new VersionsAdapter(versionsList, requireContext());
+        recyclerView.setAdapter(versionsAdapter);
+        recyclerView.setHasFixedSize(true);
+    }
+    private void initData() {
+        versionsList = SportXmlParser.parseSports(requireContext());
+
+        // Initialize VersionsAdapter before using it
+        versionsAdapter = new VersionsAdapter(versionsList, requireContext());
+
+
+        // Log the size of the versionsList
+        Log.d("DirectoryFragment", "Versions list size: " + versionsList.size());
+
+        // Load favorite states from SharedPreferences and update versionsList accordingly
+        for (Versions version : versionsList) {
+            boolean favorite = versionsAdapter.loadFavoriteState(version.getclubName());
+            version.setFavorite(favorite);
+            Log.d("DirectoryFragment", "Club: " + version.getclubName() + ", Favorite: " + favorite);
+        }
+    }
+
 }
 
 

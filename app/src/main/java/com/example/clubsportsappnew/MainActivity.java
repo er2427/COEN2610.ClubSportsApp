@@ -1,7 +1,6 @@
 package com.example.clubsportsappnew;
 
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,14 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (!isLoggedIn()) {
-            // Start LoginPage activity
-            Intent intent = new Intent(this, com.example.clubsportsappnew.ui.home.LoginPage.class);
-            startActivity(intent);
-            finish();
-            return;
-        }
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -55,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Define top-level destinations (those that don't have Up button in the app bar)
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_slideshow)
+                R.id.nav_home)
                 .setOpenableLayout(drawer)
                 .build();
 
@@ -80,26 +71,26 @@ public class MainActivity extends AppCompatActivity {
                     drawer.closeDrawers(); // Close the drawer after navigation
                     return true;
                 }
-                else if (id == R.id.nav_admin) {
-                    navController.navigate(R.id.nav_admin);
+                else if (id == R.id.nav_calendar) {
+                    navController.navigate(R.id.nav_calendar);
                     drawer.closeDrawers();
                     return true;
                 }
-                else if (id == R.id.nav_logout) {
-                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean("isLoggedIn", false);
-                    editor.apply();
-
-                    // Start LoginPage activity
-                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.home.LoginPage.class);
-                    startActivity(intent);
-
-                    // Finish current activity (MainActivity)
-                    finish();
-
-                    return true;
-                }
+//                else if (id == R.id.nav_logout) {
+////                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
+////                    SharedPreferences.Editor editor = sharedPreferences.edit();
+////                    editor.putBoolean("isLoggedIn", false);
+////                    editor.apply();
+////
+////                    // Start LoginPage activity
+////                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.home.LoginActivity.class);
+////                    startActivity(intent);
+////
+////                    // Finish current activity (MainActivity)
+////                    finish();
+//
+//                    return true;
+//                }
                 return false;
             }
         });
@@ -116,11 +107,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
-
-    public boolean isLoggedIn() {
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
-        return sharedPreferences.getBoolean("isLoggedIn", false);
     }
 }
 
