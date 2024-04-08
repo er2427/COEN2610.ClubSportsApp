@@ -79,7 +79,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Bowling </sportName>
+		<sportName>Bowling</sportName>
 		<description>Practice</description>
 		<location>Annex</location>
 		<type>Weekly</type>
@@ -92,7 +92,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Bowling </sportName>
+		<sportName>Bowling</sportName>
 		<description>Practice</description>
 		<location>Annex</location>
 		<type>Weekly</type>
@@ -157,7 +157,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Equestrian </sportName>
+		<sportName>Equestrian</sportName>
 		<description>Practice</description>
 		<location>Cedar Creek Equestrian </location>
 		<type>Weekly</type>
@@ -170,87 +170,87 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Equestrian </sportName>
+		<sportName>Equestrian</sportName>
 		<description>Practice</description>
 		<location>Cedar Creek Equestrian </location>
 		<type>Weekly</type>
 		<day>Tuesday</day>
 		<startTimeHour>4</startTimeHour>
-		<startTimeMinute>000</startTimeMinute>
+		<startTimeMinute>00</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
 		<endTimeHour>5</endTimeHour>
-		<endTimeMinute>000</endTimeMinute>
+		<endTimeMinute>00</endTimeMinute>
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Equestrian </sportName>
+		<sportName>Equestrian</sportName>
 		<description>Practice </description>
 		<location>Cedar Creek Equestrian </location>
 		<type>Weekly </type>
 		<day>Tuesday</day>
 		<startTimeHour>6</startTimeHour>
-		<startTimeMinute>000</startTimeMinute>
+		<startTimeMinute>00</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
 		<endTimeHour>7</endTimeHour>
-		<endTimeMinute>000</endTimeMinute>
+		<endTimeMinute>00</endTimeMinute>
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Equestrian </sportName>
+		<sportName>Equestrian</sportName>
 		<description>Practice </description>
-		<location>CedarCedar Creek Equestrian </location>
+		<location>Cedar Creek Equestrian </location>
 		<type>Weekly</type>
 		<day>Wednesday</day>
 		<startTimeHour>6</startTimeHour>
-		<startTimeMinute>000</startTimeMinute>
+		<startTimeMinute>00</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
 		<endTimeHour>7</endTimeHour>
-		<endTimeMinute>000</endTimeMinute>
+		<endTimeMinute>00</endTimeMinute>
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Equestrian </sportName>
+		<sportName>Equestrian</sportName>
 		<description>Practice </description>
 		<location>Cedar Creek Equestrian </location>
 		<type>Weekly </type>
 		<day>Thursday</day>
 		<startTimeHour>7</startTimeHour>
-		<startTimeMinute>000</startTimeMinute>
+		<startTimeMinute>00</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
 		<endTimeHour>8</endTimeHour>
-		<endTimeMinute>000</endTimeMinute>
+		<endTimeMinute>00</endTimeMinute>
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - Overwatch 2</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>Overwatch 2</location>
 		<type>Weekly</type>
 		<day>Monday</day>
 		<startTimeHour>7</startTimeHour>
-		<startTimeMinute>000</startTimeMinute>
+		<startTimeMinute>00</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - Overwatch 2</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>Overwatch 2</location>
 		<type>Weekly</type>
 		<day>Saturday</day>
 		<startTimeHour>2</startTimeHour>
-		<startTimeMinute>000</startTimeMinute>
+		<startTimeMinute>00</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - Rainbox Six: Siege</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>Rainbow Six: Siege</location>
 		<type>Weekly</type>
 		<day>Tuesday</day>
 		<startTimeHour>7</startTimeHour>
@@ -262,8 +262,8 @@
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - League of Legends</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>League of Legends</location>
 		<type>Weekly</type>
 		<day>Tuesday</day>
 		<startTimeHour>7</startTimeHour>
@@ -275,42 +275,42 @@
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - Counter Strike 2</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>Counter Strike 2</location>
 		<type>Weekly</type>
 		<day>Monday</day>
 		<startTimeHour>6</startTimeHour>
 		<startTimeMinute>30</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - Counter Strike 2</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>Counter Strike 2</location>
 		<type>Weekly</type>
 		<day>Tuesday</day>
 		<startTimeHour>6</startTimeHour>
 		<startTimeMinute>30</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>E-Sports</sportName>
-		<description>Practice - Counter Strike 2</description>
-		<location>Online</location>
+		<description>Practice</description>
+		<location>Counter Strike 2</location>
 		<type>Weekly</type>
 		<day>Friday</day>
 		<startTimeHour>6</startTimeHour>
 		<startTimeMinute>30</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>Fencing</sportName>
@@ -521,7 +521,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Pickleball </sportName>
+		<sportName>Pickleball</sportName>
 		<description>Practice</description>
 		<location>Rec Plex</location>
 		<type>Weekly</type>
@@ -534,7 +534,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Pickleball </sportName>
+		<sportName>Pickleball</sportName>
 		<description>Practice</description>
 		<location>Rec Plex</location>
 		<type>Weekly</type>
@@ -664,7 +664,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Non Varsity Rowing  </sportName>
+		<sportName>Non Varsity Rowing</sportName>
 		<description>Practice</description>
 		<location>AMU Ballroom Level </location>
 		<type>Weekly</type>
@@ -677,7 +677,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Varsity Rowing  </sportName>
+		<sportName>Varsity Rowing</sportName>
 		<description>Practice </description>
 		<location>AMU Ballroom Level </location>
 		<type>Weekly</type>
@@ -690,7 +690,7 @@
 		<endTimePeriod>AM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Varsity Rowing </sportName>
+		<sportName>Varsity Rowing</sportName>
 		<description>Practice </description>
 		<location>AMU Ballroom Level </location>
 		<type>Weekly</type>
@@ -703,7 +703,7 @@
 		<endTimePeriod>AM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Varsity Rowing </sportName>
+		<sportName>Varsity Rowing</sportName>
 		<description>Practice </description>
 		<location>AMU Ballroom Level </location>
 		<type>Weekly</type>
@@ -781,69 +781,69 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Running </sportName>
+		<sportName>Running</sportName>
 		<description>Practice </description>
 		<location>SHAMU</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Monday</day>
 		<startTimeHour>3</startTimeHour>
 		<startTimeMinute>45</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Running </sportName>
+		<sportName>Running</sportName>
 		<description>Practice </description>
 		<location>SHAMU</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Tuesday</day>
 		<startTimeHour>3</startTimeHour>
 		<startTimeMinute>45</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Running </sportName>
+		<sportName>Running</sportName>
 		<description>Practice</description>
 		<location>SHAMU</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Wednesday</day>
 		<startTimeHour>3</startTimeHour>
 		<startTimeMinute>45</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Running </sportName>
+		<sportName>Running</sportName>
 		<description>Practice</description>
 		<location>SHAMU</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Thursday</day>
 		<startTimeHour>3</startTimeHour>
 		<startTimeMinute>45</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Running </sportName>
+		<sportName>Running</sportName>
 		<description>Practice</description>
 		<location>SHAMU</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Friday</day>
 		<startTimeHour>3</startTimeHour>
 		<startTimeMinute>45</startTimeMinute>
 		<startTimePeriod>PM</startTimePeriod>
-		<endTimeHour/>
-		<endTimeMinute/>
-		<endTimePeriod/>
+		<endTimeHour>None</endTimeHour>
+		<endTimeMinute></endTimeMinute>
+		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
 		<sportName>Sailing</sportName>
@@ -888,7 +888,7 @@
 		<sportName>Sailing</sportName>
 		<description>Team Meeting</description>
 		<location>Campus Classroom</location>
-		<type>Weekly</type>
+		<type>Team Meeting</type>
 		<day>Wednesday</day>
 		<startTimeHour>8</startTimeHour>
 		<startTimeMinute>00</startTimeMinute>
@@ -898,7 +898,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Soccer - Men </sportName>
+		<sportName>Soccer - Men</sportName>
 		<description>Practice </description>
 		<location>Valley Fields</location>
 		<type>Weekly</type>
@@ -914,7 +914,7 @@
 		<sportName>Soccer- Men</sportName>
 		<description>Practice </description>
 		<location>Valley Fields </location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Wednesday</day>
 		<startTimeHour>6</startTimeHour>
 		<startTimeMinute>30</startTimeMinute>
@@ -924,7 +924,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Soccer- Women</sportName>
+		<sportName>Soccer - Women</sportName>
 		<description>Practice</description>
 		<location>Valley Fields Bubble</location>
 		<type>Weekly</type>
@@ -937,7 +937,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Soccer- Women</sportName>
+		<sportName>Soccer - Women</sportName>
 		<description>Practice</description>
 		<location>Valley Fields Turf</location>
 		<type>Weekly</type>
@@ -1028,10 +1028,10 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Tae Kwon Do </sportName>
+		<sportName>Tae Kwon Do</sportName>
 		<description>Practice </description>
 		<location>Schroeder Hall Multipurpose Room</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Tuesday</day>
 		<startTimeHour>7</startTimeHour>
 		<startTimeMinute>00</startTimeMinute>
@@ -1054,7 +1054,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Tennis </sportName>
+		<sportName>Tennis</sportName>
 		<description>Practice </description>
 		<location>Elite Sport Club-NorthShore</location>
 		<type>Weekly</type>
@@ -1067,8 +1067,8 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Tennis </sportName>
-		<description>Practice </description>
+		<sportName>Tennis</sportName>
+		<description>Practice</description>
 		<location>Elite Sport Club-NorthShore</location>
 		<type>Weekly</type>
 		<day>Monday</day>
@@ -1197,7 +1197,7 @@
 		<endTimePeriod>PM</endTimePeriod>
 	</practice>
 	<practice>
-		<sportName>Volleyball - Men </sportName>
+		<sportName>Volleyball - Men</sportName>
 		<description>Practice </description>
 		<location>Cristo Rey High School</location>
 		<type>Weekly</type>
@@ -1213,7 +1213,7 @@
 		<sportName>Volleyball - Men</sportName>
 		<description>Practice</description>
 		<location>Cristo Rey High School</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Wednesday</day>
 		<startTimeHour>8</startTimeHour>
 		<startTimeMinute>30</startTimeMinute>
@@ -1226,7 +1226,7 @@
 		<sportName>Volleyball - Men</sportName>
 		<description>Practice </description>
 		<location>Cristo Rey High School</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Monday</day>
 		<startTimeHour>7</startTimeHour>
 		<startTimeMinute>00</startTimeMinute>
@@ -1239,7 +1239,7 @@
 		<sportName>Volleyball - Women</sportName>
 		<description>Practice</description>
 		<location>Cristo Rey High School</location>
-		<type>Weekly </type>
+		<type>Weekly</type>
 		<day>Wednesday</day>
 		<startTimeHour>7</startTimeHour>
 		<startTimeMinute>00</startTimeMinute>

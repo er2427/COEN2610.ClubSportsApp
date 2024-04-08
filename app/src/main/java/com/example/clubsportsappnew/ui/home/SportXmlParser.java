@@ -7,25 +7,40 @@ import android.util.Log;
 
 import com.example.clubsportsappnew.R;
 import com.example.clubsportsappnew.Versions;
+import com.example.clubsportsappnew.ui.Practice;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+import java.io.File;
 
 public class SportXmlParser {
 
     public static ArrayList<Versions> parseSports(Context context) {
         ArrayList<Versions> versionsList = new ArrayList<Versions>();
+        HashMap<String, ArrayList<Practice>> practiceMap = new HashMap<>();
 
         try {
             Resources resources = context.getResources();
             XmlResourceParser parser = resources.getXml(R.xml.sports);
+            XmlResourceParser parser2 = resources.getXml(R.xml.practice_times);
 
             int eventType = parser.getEventType();
+            int eventType2 = parser2.getEventType();
+            Practice currentPractice = null;
             Versions currentSport = null;
-
+            //make it so that the practice times load into the correct sport
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 switch (eventType) {
                     case XmlPullParser.START_TAG:
@@ -55,7 +70,75 @@ public class SportXmlParser {
                 eventType = parser.next();
             }
 
-        } catch (XmlPullParserException | IOException e) {
+            while(eventType2 != XmlPullParser.END_DOCUMENT) {
+                switch (eventType2) {
+                    case XmlPullParser.START_TAG:
+                        if ("practice".equals(parser2.getName())) {
+                            currentPractice = new Practice();
+                        } else if (currentPractice != null) {
+                            switch (parser2.getName()) {
+                                case "sportName":
+                                    currentPractice.setSportName(parser2.nextText());
+                                    break;
+                                case "description":
+                                    currentPractice.setDescription(parser2.nextText());
+                                    break;
+                                case "location":
+                                    currentPractice.setLocation(parser2.nextText());
+                                    break;
+                                case "day":
+                                    currentPractice.setDay(parser2.nextText());
+                                    break;
+                                case "startTimeHour":
+                                    currentPractice.setStartTimeHour(parser2.nextText() + ":");
+                                    break;
+                                case "startTimeMinute":
+                                    currentPractice.setStartTimeMinute(parser2.nextText());
+                                    break;
+                                case "endTimeHour":
+                                    String endTimeHour = parser2.nextText();
+                                    if(endTimeHour.equals("None")){
+                                        currentPractice.setEndTimeHour(null);
+                                    }
+                                    else{
+                                        currentPractice.setEndTimeHour(" - " + endTimeHour + ":");
+                                    }
+                                    break;
+                                case "endTimeMinute":
+                                    currentPractice.setEndTimeMinute(parser2.nextText());
+                                    break;
+                                case "endTimePeriod":
+                                    currentPractice.setEndTimePeriod(parser2.nextText());
+                                    break;
+                            }
+                        }
+                        break;
+                    case XmlPullParser.END_TAG:
+                        if ("practice".equals(parser2.getName()) && currentPractice != null) {
+                            if (practiceMap.containsKey(currentPractice.getSportName())) {
+                                practiceMap.get(currentPractice.getSportName()).add(currentPractice);
+                            } else {
+                                ArrayList<Practice> practices = new ArrayList<>();
+                                practices.add(currentPractice);
+                                practiceMap.put(currentPractice.getSportName(), practices);
+                            }
+                            currentPractice = null;
+                        }
+                        break;
+                }
+                eventType2 = parser2.next();
+            }
+            for(Versions version: versionsList) {
+                ArrayList<Practice> practices = practiceMap.get(version.getclubName());
+                if(practices==null){
+                    practices = new ArrayList<>();
+                }
+                version.setPractices(practices);
+            }
+        }
+
+
+        catch (XmlPullParserException | IOException e) {
             Log.e("XmlParser", "Error parsing XML", e);
         }
 

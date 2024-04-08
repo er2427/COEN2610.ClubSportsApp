@@ -121,8 +121,13 @@
 		<contactEmail>Gavin.Tacke@mu.edu</contactEmail>
 	</sport>
 	<sport>
-		<sportName>Rowing</sportName>
-		<contactName>Eric Walsh </contactName>
+		<sportName>Non Varsity Rowing</sportName>
+		<contactName>Eric Walsh</contactName>
+		<contactEmail>murc.treasure@mu.edu</contactEmail>
+	</sport>
+	<sport>
+		<sportName>Varsity Rowing</sportName>
+		<contactName>Eric Walsh</contactName>
 		<contactEmail>murc.treasure@mu.edu</contactEmail>
 	</sport>
 	<sport>
@@ -136,7 +141,7 @@
 		<contactEmail>Keyaira.Marshall@mu.edu</contactEmail>
 	</sport>
 	<sport>
-		<sportName>Running </sportName>
+		<sportName>Running</sportName>
 		<contactName>Nora Treacy</contactName>
 		<contactEmail>Nora.Treacy@mu.edu</contactEmail>
 	</sport>
@@ -151,7 +156,7 @@
 		<contactEmail>Iris.Murphy@mu.edu</contactEmail>
 	</sport>
 	<sport>
-		<sportName>Soccer- Men</sportName>
+		<sportName>Soccer - Men</sportName>
 		<contactName>Christian Romano</contactName>
 		<contactEmail>Christian.Romano@mu.edu</contactEmail>
 	</sport>
@@ -216,7 +221,7 @@
 		<contactEmail>Julia.Marciniak@mu.edu</contactEmail>
 	</sport>
 	<sport>
-		<sportName>Pickleball </sportName>
+		<sportName>Pickleball</sportName>
 		<contactName>Hayder Alkhalisy</contactName>
 		<contactEmail>Hayder.Alkhalisy@mu.edu</contactEmail>
 	</sport>

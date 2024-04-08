@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.clubsportsappnew.ui.Practice;
+
 import com.example.clubsportsappnew.Versions;
 
 import java.util.ArrayList;
@@ -22,8 +24,8 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
     private static final String PREF_NAME = "FavoritePrefs";
     private SharedPreferences sharedPreferences;
-
     List<Versions> versionsList;
+
 
     public VersionsAdapter(List<Versions> versionsList, Context context) {
         this.versionsList = new ArrayList<>(versionsList);
@@ -49,11 +51,13 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
         holder.clubNameTxt.setText(versions.getclubName());
         holder.PresidentTxt.setText(versions.getPresident());
         holder.EmailTxt.setText(versions.getEmail());
-        holder.SemesterTxt.setText(versions.getSemester());
         holder.descriptionTxt.setText(versions.getDescription());
+        holder.practice_times_container.removeAllViews();
 
+        List<Practice> practices = versions.getPractices();
         boolean isExpandable = versionsList.get(position).isExpandable();
         holder.expandableLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
+        holder.descriptionTxt.setVisibility(View.GONE);
 
         // Clicking button in directory fragment
         Button favorite_button = holder.itemView.findViewById(R.id.favorite_button); // Change to your actual ID
@@ -64,6 +68,69 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
             saveFavoriteState(currentVersion.getclubName(), currentVersion.getFavorite());
         });
         updateStarIcon(versionsList.get(position), favorite_button);
+
+        int previousPracticeId = -1;
+        for(Practice practice: practices) {
+            View practiceTimeView = LayoutInflater.from(holder.itemView.getContext()).inflate(R.layout.practice_time, null, false);
+
+            int currentPracticeId = View.generateViewId();
+            practiceTimeView.setId(currentPracticeId);
+
+            //this is checking to see if there's already a practice and if there is, it will set the current practice below the previous one
+            if(previousPracticeId != -1){
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT
+                );
+                params.addRule(RelativeLayout.BELOW, previousPracticeId);
+                practiceTimeView.setLayoutParams(params);
+            }
+            //setting the text views to the correct values
+            TextView dayTextView = practiceTimeView.findViewById(R.id.day);
+            TextView startHourTextView = practiceTimeView.findViewById(R.id.startHour);
+            TextView startMinuteTextView = practiceTimeView.findViewById(R.id.startMinute);
+            TextView endHourTextView = practiceTimeView.findViewById(R.id.endHour);
+            TextView endMinuteTextView = practiceTimeView.findViewById(R.id.endMinute);
+            TextView endPeriodTextView = practiceTimeView.findViewById(R.id.endPeriod);
+            TextView locationTextView = practiceTimeView.findViewById(R.id.location);
+
+            //setting the text views to the correct values
+            dayTextView.setText(practice.getDay());
+            startHourTextView.setText(practice.getStartTimeHour());
+            startMinuteTextView.setText(practice.getStartTimeMinute());
+            endHourTextView.setText(practice.getEndTimeHour());
+            endMinuteTextView.setText(practice.getEndTimeMinute());
+            endPeriodTextView.setText(practice.getEndTimePeriod());
+            locationTextView.setText(practice.getLocation());
+            //if the sport doesn't have a practice, make it so nothing shows
+            //also gets rid of the "Practice Information" text
+            if(practice.getDay() == null || practice.getDay().isEmpty()){
+                dayTextView.setVisibility(View.GONE);
+            }
+            else{
+                holder.descriptionTxt.setVisibility(View.VISIBLE);
+            }
+            if(practice.getStartTimeHour() == null || practice.getStartTimeHour().isEmpty()){
+                startHourTextView.setVisibility(View.GONE);
+            }
+            if(practice.getStartTimeMinute() == null || practice.getStartTimeMinute().isEmpty()){
+                startMinuteTextView.setVisibility(View.GONE);
+            }
+            if(practice.getEndTimeHour() == null || practice.getEndTimeHour().isEmpty()){
+                endHourTextView.setVisibility(View.GONE);
+            }
+            if(practice.getEndTimeMinute() == null || practice.getEndTimeMinute().isEmpty()){
+                endMinuteTextView.setVisibility(View.GONE);
+            }
+            if(practice.getEndTimePeriod() == null || practice.getEndTimePeriod().isEmpty()){
+                endPeriodTextView.setVisibility(View.GONE);
+            }
+            if(practice.getLocation() == null || practice.getLocation().isEmpty()){
+                locationTextView.setVisibility(View.GONE);
+            }
+            holder.practice_times_container.addView(practiceTimeView);
+            previousPracticeId = currentPracticeId;
+        }
     }
 
     private void saveFavoriteState(String clubName, boolean favorite) {
@@ -91,22 +158,32 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
     public class VersionVH extends RecyclerView.ViewHolder {
 
-        TextView clubNameTxt, PresidentTxt, EmailTxt, SemesterTxt, descriptionTxt;
+        TextView clubNameTxt, PresidentTxt, EmailTxt, descriptionTxt, dayTextView, startHourTextView, startMinuteTextView, endMinuteTextView, endHourTextView, endPeriodTextView, locationTextView, typeText;
         LinearLayout linearLayout;
         RelativeLayout expandableLayout;
+        RelativeLayout practice_times_container;
 
         public VersionVH(@NonNull View itemView) {
             super(itemView);
+            //setting the text views to the correct values
+            clubNameTxt = itemView.findViewById(R.id.clubName);
+            PresidentTxt = itemView.findViewById(R.id.president);
 
-            clubNameTxt = itemView.findViewById(R.id.event_name);
-            PresidentTxt = itemView.findViewById(R.id.date);
             EmailTxt = itemView.findViewById(R.id.contact);
-            SemesterTxt = itemView.findViewById(R.id.api_level);
             descriptionTxt = itemView.findViewById(R.id.description);
+            dayTextView = itemView.findViewById(R.id.day);
+            startHourTextView = itemView.findViewById(R.id.startHour);
+            startMinuteTextView = itemView.findViewById(R.id.startMinute);
+            endMinuteTextView = itemView.findViewById(R.id.endMinute);
+            endHourTextView = itemView.findViewById(R.id.endHour);
+            endPeriodTextView = itemView.findViewById(R.id.endPeriod);
+            locationTextView = itemView.findViewById(R.id.location);
 
             linearLayout = itemView.findViewById(R.id.linear_layout);
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
+            practice_times_container = itemView.findViewById(R.id.practice_times_container);
 
+            // Clicking the sport in directory fragment
             linearLayout.setOnClickListener((View v) -> {
                 int position = getAbsoluteAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {
