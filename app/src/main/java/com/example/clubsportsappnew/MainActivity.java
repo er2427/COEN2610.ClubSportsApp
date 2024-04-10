@@ -76,21 +76,21 @@ public class MainActivity extends AppCompatActivity {
                     drawer.closeDrawers();
                     return true;
                 }
-//                else if (id == R.id.nav_logout) {
-////                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
-////                    SharedPreferences.Editor editor = sharedPreferences.edit();
-////                    editor.putBoolean("isLoggedIn", false);
-////                    editor.apply();
-////
-////                    // Start LoginPage activity
-////                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.home.LoginActivity.class);
-////                    startActivity(intent);
-////
-////                    // Finish current activity (MainActivity)
-////                    finish();
-//
-//                    return true;
-//                }
+                else if (id == R.id.nav_logout) {
+                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("isLoggedIn", false);
+                    editor.apply();
+
+                    // Start LoginPage activity
+                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.home.LoginActivity.class);
+                    startActivity(intent);
+
+                    // Finish current activity (MainActivity)
+                    finish();
+
+                    return true;
+                }
                 return false;
             }
         });
