@@ -2,6 +2,7 @@ package com.example.clubsportsappnew;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,9 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
 
 
     public void setFilteredList(List<Versions> versionsList) {
-        this.versionsList = versionsList;
+        this.versionsList.clear();
+        this.versionsList.addAll(versionsList);
+        Log.d("VersionsAdapter", "VersionsList size: " + this.versionsList.size());
         notifyDataSetChanged();
     }
 
@@ -48,6 +51,8 @@ public class VersionsAdapter extends RecyclerView.Adapter<VersionsAdapter.Versio
     @Override
     public void onBindViewHolder(@NonNull VersionVH holder, int position) {
         Versions versions = versionsList.get(position);
+        Log.d("VersionsAdapter", "Binding version: " + versions.getclubName());
+
         holder.clubNameTxt.setText(versions.getclubName());
         holder.PresidentTxt.setText(versions.getPresident());
         holder.EmailTxt.setText(versions.getEmail());
