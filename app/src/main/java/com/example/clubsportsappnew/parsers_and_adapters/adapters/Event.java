@@ -1,9 +1,9 @@
-package com.example.clubsportsappnew.ui.calendar;
+package com.example.clubsportsappnew.parsers_and_adapters.adapters;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.ArrayList;
+
 public class Event
 {
     private String name;

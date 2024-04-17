@@ -1,11 +1,10 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.ui.main_pages;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,8 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SearchView;
 
 import com.example.clubsportsappnew.R;
-import com.example.clubsportsappnew.Versions;
-import com.example.clubsportsappnew.VersionsAdapter;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.Versions;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.VersionsAdapter;
+import com.example.clubsportsappnew.parsers_and_adapters.parsers.SportXmlParser;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui;
+package com.example.clubsportsappnew.parsers_and_adapters.adapters;
 
 public class Practice {
     private String sportName;

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".ui.calendar.CalendarFragment">
+    tools:context=".ui.main_pages.CalendarFragment">
 
 
     <TextView

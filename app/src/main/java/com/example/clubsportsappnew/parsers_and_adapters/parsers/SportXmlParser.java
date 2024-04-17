@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.parsers_and_adapters.parsers;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,24 +6,15 @@ import android.content.res.XmlResourceParser;
 import android.util.Log;
 
 import com.example.clubsportsappnew.R;
-import com.example.clubsportsappnew.Versions;
-import com.example.clubsportsappnew.ui.Practice;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.Versions;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.Practice;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
-import java.io.File;
 
 public class SportXmlParser {
 
