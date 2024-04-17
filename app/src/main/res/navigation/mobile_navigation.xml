@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.clubsportsappnew.ui.home.HomeFragment"
+        android:name="com.example.clubsportsappnew.ui.main_pages.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/nav_favorites"
-        android:name="com.example.clubsportsappnew.ui.home.FavoritesFragment"
+        android:name="com.example.clubsportsappnew.ui.main_pages.FavoritesFragment"
         android:label="Favorites" >
         <action
             android:id="@+id/action_nav_teams_to_nav_favorites"
@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/directoryFragment"
-        android:name="com.example.clubsportsappnew.ui.home.DirectoryFragment"
+        android:name="com.example.clubsportsappnew.ui.main_pages.DirectoryFragment"
         android:label="Directory" >
         <action
             android:id="@+id/action_nav_teams_to_directoryFragment"
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/nav_calendar"
-        android:name="com.example.clubsportsappnew.ui.calendar.CalendarFragment"
+        android:name="com.example.clubsportsappnew.ui.main_pages.CalendarFragment"
         android:label="Calendar" >
         <action
             android:id="@+id/action_nav_to_calendar"
@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/nav_admin"
-        android:name="com.example.clubsportsappnew.ui.home.Filter"
+        android:name="com.example.clubsportsappnew.ui.account_info.Filter"
         android:label="Filter" >
         <action
             android:id="@+id/action_nav_to_filter"
@@ -53,7 +53,7 @@
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.clubsportsappnew.ui.home.HomeFragment"
+        android:name="com.example.clubsportsappnew.ui.main_pages.HomeFragment"
         android:label="Logout" >
         <action
             android:id="@+id/action_nav_to_logout"

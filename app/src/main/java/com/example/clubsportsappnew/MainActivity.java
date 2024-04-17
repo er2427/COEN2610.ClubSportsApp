@@ -3,12 +3,10 @@ package com.example.clubsportsappnew;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
 import android.content.Intent;
 
-import com.example.clubsportsappnew.ui.home.MyAccountActivity;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.apply();
 
                     // Start LoginPage activity
-                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.home.LoginActivity.class);
+                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.account_info.LoginActivity.class);
                     startActivity(intent);
 
                     // Finish current activity (MainActivity)

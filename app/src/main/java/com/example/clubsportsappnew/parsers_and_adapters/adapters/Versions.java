@@ -1,6 +1,4 @@
-package com.example.clubsportsappnew;
-
-import com.example.clubsportsappnew.ui.Practice;
+package com.example.clubsportsappnew.parsers_and_adapters.adapters;
 
 import java.util.List;
 

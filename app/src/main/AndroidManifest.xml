@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ClubSportsAppNew"
         tools:targetApi="31">
         <activity
-            android:name=".ui.home.LoginActivity"
+            android:name=".ui.account_info.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.home.SignupActivity"
+            android:name=".ui.account_info.SignupActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -31,7 +31,7 @@
             android:theme="@style/Theme.ClubSportsAppNew.NoActionBar" />
 
         <activity
-            android:name=".ui.home.MyAccountActivity" />
+            android:name=".ui.account_info.MyAccountActivity" />
     </application>
 
 </manifest>
