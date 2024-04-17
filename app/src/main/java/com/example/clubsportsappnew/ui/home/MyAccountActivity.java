@@ -1,8 +1,12 @@
 package com.example.clubsportsappnew.ui.home;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +16,8 @@ import com.example.clubsportsappnew.databinding.MyAccountBinding;
 
 public class MyAccountActivity extends AppCompatActivity {
     private MyAccountBinding binding;
+    TextView textViewDisplayFirstName, textViewDisplayLastName, textViewDisplayEmail;
+    DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +32,40 @@ public class MyAccountActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        textViewDisplayFirstName = findViewById(R.id.textViewDisplayFirstName);
+        textViewDisplayLastName = findViewById(R.id.textViewDisplayLastName);
+        textViewDisplayEmail = findViewById(R.id.textViewDisplayEmail);
+
+        databaseHelper = new DatabaseHelper(this);
+
+        String username = getIntent().getStringExtra("username");
+
+        displayUserData(username);
+    }
+
+    public void displayUserData(String username) {
+        if (username != null) {
+            Cursor cursor = databaseHelper.getUserData(username);
+            if (cursor.getCount() == 1) { //assuming username is unique
+                cursor.moveToFirst();
+
+                @SuppressLint("Range") String firstName = cursor.getString(cursor.getColumnIndex("firstName"));
+                @SuppressLint("Range") String lastName = cursor.getString(cursor.getColumnIndex("lastName"));
+                @SuppressLint("Range") String email = cursor.getString(cursor.getColumnIndex("username"));
+
+                textViewDisplayFirstName.setText(firstName);
+                textViewDisplayLastName.setText(lastName);
+                textViewDisplayEmail.setText(email);
+
+                // Store user data in SharedPreferences
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("UserData", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("firstName", firstName);
+                editor.putString("lastName", lastName);
+                editor.putString("email", email);
+                editor.apply();
+            }
+        }
     }
 }

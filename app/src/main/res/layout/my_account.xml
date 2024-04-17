@@ -47,15 +47,17 @@
                 android:layout_height="wrap_content"
                 android:text="First Name:"
                 android:textColor="@color/marquette_blue"
-                android:textSize="16sp"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_marginTop="16dp"/>
 
             <TextView
                 android:id="@+id/textViewDisplayFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/marquette_gold"
-                android:textSize="16sp"
+                android:textColor="@color/marquette_blue"
+                android:textSize="20sp"
+                android:text=""
                 android:layout_marginTop="8dp"/>
 
             <TextView
@@ -64,15 +66,17 @@
                 android:layout_height="wrap_content"
                 android:text="Last Name:"
                 android:textColor="@color/marquette_blue"
-                android:textSize="16sp"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_marginTop="16dp"/>
 
             <TextView
                 android:id="@+id/textViewDisplayLastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/marquette_gold"
-                android:textSize="16sp"
+                android:textColor="@color/marquette_blue"
+                android:textSize="20sp"
+                android:text=""
                 android:layout_marginTop="8dp"/>
 
             <TextView
@@ -81,15 +85,17 @@
                 android:layout_height="wrap_content"
                 android:text="Email:"
                 android:textColor="@color/marquette_blue"
-                android:textSize="16sp"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:layout_marginTop="16dp"/>
 
             <TextView
                 android:id="@+id/textViewDisplayEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/marquette_gold"
-                android:textSize="16sp"
+                android:textColor="@color/marquette_blue"
+                android:textSize="20sp"
+                android:text=""
                 android:layout_marginTop="8dp"/>
 
             <Button
