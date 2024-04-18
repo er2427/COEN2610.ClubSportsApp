@@ -32,7 +32,7 @@ public class AdminFragment extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestry() {
+    protected void onDestroy() {
         super.onDestroy();
         if (databaseHelper != null) {
             databaseHelper.close();
