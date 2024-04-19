@@ -5,12 +5,12 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
 import android.content.Intent;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;

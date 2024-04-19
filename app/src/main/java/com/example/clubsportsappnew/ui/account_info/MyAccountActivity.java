@@ -7,6 +7,9 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,7 +36,6 @@ public class MyAccountActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         textViewDisplayFirstName = findViewById(R.id.textViewDisplayFirstName);
         textViewDisplayLastName = findViewById(R.id.textViewDisplayLastName);
         textViewDisplayEmail = findViewById(R.id.textViewDisplayEmail);
