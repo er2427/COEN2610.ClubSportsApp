@@ -1,11 +1,15 @@
 package com.example.clubsportsappnew;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.content.Intent;
+import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -18,11 +22,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.clubsportsappnew.databinding.ActivityMainBinding;
+import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
+import com.example.clubsportsappnew.data.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    TextView displayFirstName, displayLastName, displayEmail;
+    DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        View headerView = navigationView.getHeaderView(0);
+
+
 
         // Set up the navigation item click listener
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -86,6 +97,33 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        //making it show the users first and last name and email
+        displayFirstName = headerView.findViewById(R.id.displayFirstName);
+        displayLastName = headerView.findViewById(R.id.displayLastName);
+        displayEmail = headerView.findViewById(R.id.displayEmail);
+
+        databaseHelper = new DatabaseHelper(this);
+        String username = getIntent().getStringExtra("username");
+        displayUserData(username);
+
+
+    }
+    //makes sure that even if the navigation bar isn't clicked first the data still loads to it
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Retrieve user data from SharedPreferences
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("UserData", MODE_PRIVATE);
+        String firstName = sharedPreferences.getString("firstName", "");
+        String lastName = sharedPreferences.getString("lastName", "");
+        String email = sharedPreferences.getString("email", "");
+
+        // Display user data
+        displayFirstName.setText(firstName);
+        displayLastName.setText(lastName);
+        displayEmail.setText(email);
     }
 
     @Override
@@ -112,11 +150,28 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             // Create a new Intent to start MyAccountActivity
             Intent intent = new Intent(MainActivity.this, MyAccountActivity.class);
+            intent.putExtra("username", getIntent().getStringExtra("username"));
             startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void displayUserData(String username) {
+        if (username != null) {
+            Cursor cursor = databaseHelper.getUserData(username);
+            if (cursor.getCount() == 1) { //assuming username is unique
+                cursor.moveToFirst();
+
+                @SuppressLint("Range") String firstName = cursor.getString(cursor.getColumnIndex("firstName"));
+                @SuppressLint("Range") String lastName = cursor.getString(cursor.getColumnIndex("lastName"));
+                @SuppressLint("Range") String email = cursor.getString(cursor.getColumnIndex("username"));
+
+                displayFirstName.setText(firstName);
+                displayLastName.setText(lastName);
+                displayEmail.setText(email);
+            }
+        }
     }
 }
 
