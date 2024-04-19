@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.ui.account_info;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +34,6 @@ public class SignUpPage extends AppCompatActivity {
         createAccount = findViewById(R.id.createAccount);
         firstName = findViewById(R.id.firstName);
         lastName = findViewById(R.id.lastName);
-        email = findViewById(R.id.email);
         username = findViewById(R.id.signUpUsername);
         backToLogin = findViewById(R.id.BackToLoginText);
 
@@ -43,7 +42,7 @@ public class SignUpPage extends AppCompatActivity {
             public void onClick(View v) {
                 boolean accountMade = submitForm();
                 if(accountMade){ //if an account is made, bring them to the login page
-                    Intent loginIntent = new Intent(SignUpPage.this, LoginPage.class);
+                    Intent loginIntent = new Intent(SignUpPage.this, com.example.clubsportsappnew.ui.account_info.LoginPage.class);
                     startActivity(loginIntent);
                 }
             }
@@ -52,7 +51,7 @@ public class SignUpPage extends AppCompatActivity {
         backToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent3 = new Intent(SignUpPage.this, LoginPage.class);
+                Intent intent3 = new Intent(SignUpPage.this, com.example.clubsportsappnew.ui.account_info.LoginPage.class);
                 startActivity(intent3);
             }
         });

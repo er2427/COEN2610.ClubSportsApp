@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew;
+package com.example.clubsportsappnew.parsers_and_adapters.adapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,9 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.clubsportsappnew.ui.Practice;
-
-import com.example.clubsportsappnew.Versions;
+import com.example.clubsportsappnew.R;
 
 import java.util.ArrayList;
 import java.util.List;

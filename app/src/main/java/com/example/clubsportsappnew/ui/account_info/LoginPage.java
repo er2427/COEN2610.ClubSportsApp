@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.ui.account_info;
 
 import android.os.Bundle;
 import android.view.View;
@@ -53,7 +53,7 @@ public class LoginPage extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent2 = new Intent(LoginPage.this, SignUpPage.class);
+                Intent intent2 = new Intent(LoginPage.this, com.example.clubsportsappnew.ui.account_info.SignUpPage.class);
                 startActivity(intent2);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.calendar;
+package com.example.clubsportsappnew.parsers_and_adapters.parsers;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,13 +6,13 @@ import android.content.res.XmlResourceParser;
 import android.util.Log;
 
 import com.example.clubsportsappnew.R;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.Event;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 
 public class PracticeParser {

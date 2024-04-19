@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.ui.account_info;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.clubsportsappnew.data.DatabaseHelper;
 import com.example.clubsportsappnew.databinding.LoginPageBinding;
 
 public class LoginActivity extends AppCompatActivity {

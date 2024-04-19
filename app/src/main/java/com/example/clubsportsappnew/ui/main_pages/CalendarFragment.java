@@ -1,6 +1,5 @@
-package com.example.clubsportsappnew.ui.calendar;
+package com.example.clubsportsappnew.ui.main_pages;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,22 +13,22 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clubsportsappnew.R;
-import com.example.clubsportsappnew.Versions;
-import com.example.clubsportsappnew.VersionsAdapter;
-import com.example.clubsportsappnew.ui.home.SportXmlParser;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.Versions;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.VersionsAdapter;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.Event;
+import com.example.clubsportsappnew.parsers_and_adapters.adapters.EventAdapter;
+import com.example.clubsportsappnew.parsers_and_adapters.parsers.PracticeParser;
+import com.example.clubsportsappnew.parsers_and_adapters.parsers.SportXmlParser;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

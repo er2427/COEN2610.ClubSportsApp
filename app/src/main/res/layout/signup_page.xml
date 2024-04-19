@@ -10,7 +10,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".ui.home.SignupActivity">
+    tools:context=".ui.account_info.SignupActivity">
 
     <ImageView
         android:id="@+id/imageView3"

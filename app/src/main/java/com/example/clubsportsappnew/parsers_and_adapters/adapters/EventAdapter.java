@@ -1,21 +1,15 @@
-package com.example.clubsportsappnew.ui.calendar;
+package com.example.clubsportsappnew.parsers_and_adapters.adapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.clubsportsappnew.R;
-import com.example.clubsportsappnew.ui.calendar.Event;
-import com.example.clubsportsappnew.ui.calendar.EventAdapter;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;

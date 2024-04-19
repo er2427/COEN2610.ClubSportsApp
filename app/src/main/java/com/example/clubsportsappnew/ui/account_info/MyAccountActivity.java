@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.ui.account_info;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.clubsportsappnew.MainActivity;
 import com.example.clubsportsappnew.R;
+import com.example.clubsportsappnew.data.DatabaseHelper;
 import com.example.clubsportsappnew.databinding.MyAccountBinding;
 
 public class MyAccountActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.parsers_and_adapters.adapters;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.clubsportsappnew.R;
+import com.example.clubsportsappnew.parsers_and_adapters.parsers.SportXmlParser;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 

@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.data;
 
 import android.content.ContentValues;
 import android.content.Context;

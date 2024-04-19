@@ -10,8 +10,6 @@ import android.view.Menu;
 import android.content.Intent;
 import android.widget.TextView;
 
-import com.example.clubsportsappnew.ui.home.DatabaseHelper;
-import com.example.clubsportsappnew.ui.home.MyAccountActivity;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -24,6 +22,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.clubsportsappnew.databinding.ActivityMainBinding;
+import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
+import com.example.clubsportsappnew.data.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.apply();
 
                     // Start LoginPage activity
-                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.home.LoginActivity.class);
+                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.account_info.LoginActivity.class);
                     startActivity(intent);
 
                     // Finish current activity (MainActivity)

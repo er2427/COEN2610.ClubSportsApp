@@ -1,4 +1,4 @@
-package com.example.clubsportsappnew.ui.home;
+package com.example.clubsportsappnew.ui.main_pages;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
