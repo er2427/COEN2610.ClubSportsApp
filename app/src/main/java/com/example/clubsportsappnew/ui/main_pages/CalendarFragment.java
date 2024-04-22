@@ -255,7 +255,7 @@ public class CalendarFragment extends Fragment {
 
         for(Event event : filteredEvents){
             Calendar eventTime = Calendar.getInstance();
-            eventTime.set(year, month, dayOfMonth, Integer.parseInt(event.getTime()), 0);
+            eventTime.set(year, month, dayOfMonth, 0, 0);
 
             //create unique pendingIntent for this event
             Intent intent = new Intent(requireContext(), AlarmReceiver.class);
