@@ -1,5 +1,11 @@
 package com.example.clubsportsappnew.ui.main_pages;
 
+import static java.lang.Integer.*;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
@@ -18,6 +25,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clubsportsappnew.R;
+import com.example.clubsportsappnew.notifications.AlarmReceiver;
 import com.example.clubsportsappnew.parsers_and_adapters.adapters.Versions;
 import com.example.clubsportsappnew.parsers_and_adapters.adapters.VersionsAdapter;
 import com.example.clubsportsappnew.parsers_and_adapters.adapters.Event;
@@ -87,6 +95,15 @@ public class CalendarFragment extends Fragment {
 
         chipGroup = view.findViewById(R.id.chipGroup);
 
+        Button testAlarmButton = view.findViewById(R.id.test_alarm_button);
+        testAlarmButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(requireContext(), AlarmReceiver.class);
+                intent.putExtra("sportName", "Bowling");
+                requireContext().sendBroadcast(intent);
+            }
+        });
         return view;
     }
 
@@ -235,6 +252,24 @@ public class CalendarFragment extends Fragment {
         // Update the RecyclerView adapter with the filtered list of events
         eventAdapter = new EventAdapter(filteredEvents, requireContext());
         recyclerView.setAdapter(eventAdapter);
+
+        for(Event event : filteredEvents){
+            Calendar eventTime = Calendar.getInstance();
+            eventTime.set(year, month, dayOfMonth, Integer.parseInt(event.getTime()), 0);
+
+            //create unique pendingIntent for this event
+            Intent intent = new Intent(requireContext(), AlarmReceiver.class);
+            intent.putExtra("sportName", event.getSport());
+
+            //create unique string for this event
+            String uniqueString = event.getSport() + event.getDate() + event.getTime();
+            int requestCode = uniqueString.hashCode();
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(requireContext(), requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            //set the notification
+            AlarmManager alarmManager = (AlarmManager) requireContext().getSystemService(Context.ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, eventTime.getTimeInMillis(), pendingIntent);
+        }
     }
 
 

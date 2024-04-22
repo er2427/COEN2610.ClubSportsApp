@@ -9,6 +9,12 @@ import android.view.Menu;
 import android.content.Intent;
 import android.widget.TextView;
 import android.view.View;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
@@ -21,6 +27,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.example.clubsportsappnew.databinding.ActivityMainBinding;
 import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
@@ -32,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     TextView displayFirstName, displayLastName, displayEmail;
     DatabaseHelper databaseHelper;
+    private static final int REQUEST_NOTIFICATION_PERMISSION = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
         View headerView = navigationView.getHeaderView(0);
 
+        if(!isNotificationPermissionGranted()){
+            requestNotificationPermission();
+        }
+        else{
+            // Notification permission is granted
+        }
 
 
         // Set up the navigation item click listener
@@ -108,8 +124,27 @@ public class MainActivity extends AppCompatActivity {
         String username = getIntent().getStringExtra("username");
         displayUserData(username);
 
+        createNotificationChannel();
 
     }
+
+    private boolean isNotificationPermissionGranted() {
+        return NotificationManagerCompat.from(this).areNotificationsEnabled();
+    }
+
+    private void requestNotificationPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_NOTIFICATION_POLICY}, REQUEST_NOTIFICATION_PERMISSION);
+    }
+
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_NOTIFICATION_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Notification permission granted
+            }
+        }
+    }
+
     //makes sure that even if the navigation bar isn't clicked first the data still loads to it
     @Override
     protected void onResume() {
@@ -172,6 +207,19 @@ public class MainActivity extends AppCompatActivity {
                 displayLastName.setText(lastName);
                 displayEmail.setText(email);
             }
+        }
+    }
+
+    private void createNotificationChannel() {
+        // Create a notification channel for Android O and above
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "Event Reminder";
+            String description = "Channel for event reminder notifications";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("EventReminderChannel", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
         }
     }
 }
