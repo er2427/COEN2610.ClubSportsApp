@@ -33,6 +33,8 @@ import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -45,7 +47,6 @@ public class HomeFragment extends Fragment {
     private List<Event> eventList;
     private List<Versions> favorites; // For managing favorites
     private VersionsAdapter versionsAdapter; // To load favorite states
-    private ChipGroup filterChipGroup;
     private Set<String> selectedSports = new HashSet<>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -66,28 +67,6 @@ public class HomeFragment extends Fragment {
         favorites = SportXmlParser.parseSports(requireContext());
         versionsAdapter = new VersionsAdapter(favorites, requireContext());
 
-        // Initialize Filter Chips (if you're using a chip group)
-        filterChipGroup =  root.findViewById(R.id.filterChipGroup); // Add filterChipGroup in your XML layout
-        initializeFilterChips();
-
-        // Load data and display initially
-        loadAndFilterData();
-
-        return root;
-    }
-
-    private void initializeFilterChips() {
-        // Load favorites
-        loadFavorites();
-
-        List<String> sports = PracticeParser.parseSportNamesFromPractices(requireContext());
-        sports.add(0, "Favorites"); // Add 'Favorites' as a filter
-        for (String sport: sports) {
-            addChip(sport);
-        }
-    }
-
-    private void loadFavorites() {
         for (Versions version : favorites) {
             try {
                 if (versionsAdapter.loadFavoriteState(version.getclubName())) {
@@ -97,23 +76,11 @@ public class HomeFragment extends Fragment {
                 // Handle errors loading favorites
             }
         }
-    }
 
-    private void addChip(String sportName) {
-        Chip chip = new Chip(requireContext());
-        chip.setText(sportName);
-        chip.setCheckable(true);
-        chip.setChecked(selectedSports.contains(sportName));
+        // Load data and display initially
+        loadAndFilterData();
 
-        chip.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                selectedSports.add(sportName);
-            } else {
-                selectedSports.remove(sportName);
-            }
-            loadAndFilterData();
-        });
-        filterChipGroup.addView(chip);
+        return root;
     }
 
     private void loadAndFilterData() {
@@ -138,6 +105,19 @@ public class HomeFragment extends Fragment {
                     filteredEvents.add(event);
                 }
             }
+        }
+
+        // Sort the filteredEvents list by date and time
+        Collections.sort(filteredEvents, new Comparator<Event>() {
+            @Override
+            public int compare(Event e1, Event e2) {
+                return e1.getDateTimeCalendar().compareTo(e2.getDateTimeCalendar());
+            }
+        });
+
+        // Limit the number of events to 10
+        if (filteredEvents.size() > 6) {
+            filteredEvents = filteredEvents.subList(0, 6);
         }
 
         eventAdapter = new EventAdapter(filteredEvents, requireContext());
