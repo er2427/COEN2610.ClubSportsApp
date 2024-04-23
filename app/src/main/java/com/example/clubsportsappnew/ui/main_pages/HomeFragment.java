@@ -123,11 +123,20 @@ public class HomeFragment extends Fragment {
 
     private void filterEvents() {
         List<Event> filteredEvents = new ArrayList<>();
+        Calendar currentTime = Calendar.getInstance();
 
         for (Event event : eventList) {
-            if (selectedSports.contains(event.getSport()) ||
-                    (selectedSports.contains("Favorites") && versionsAdapter.loadFavoriteState(event.getSport()))) {
-                filteredEvents.add(event);
+            Calendar eventDate = event.getDateCalendar();
+            eventDate.set(Calendar.HOUR_OF_DAY,0);
+            eventDate.set(Calendar.MINUTE,0);
+            eventDate.set(Calendar.SECOND,0);
+            eventDate.set(Calendar.MILLISECOND,0);
+
+            if (!event.getTime().equals("12:00 AM")) {
+                if (eventDate.after(currentTime) && selectedSports.contains(event.getSport()) ||
+                        (selectedSports.contains("Favorites") && versionsAdapter.loadFavoriteState(event.getSport()))) {
+                    filteredEvents.add(event);
+                }
             }
         }
 
