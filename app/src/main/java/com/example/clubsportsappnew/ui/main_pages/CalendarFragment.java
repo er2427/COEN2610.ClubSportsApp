@@ -29,6 +29,8 @@ import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -120,46 +122,10 @@ public class CalendarFragment extends Fragment {
             selectedItems.add("Favorites");
         }
 
-//        SetRecyclerView();
-//
-//        // Set up RecyclerView adapter
-//        eventAdapter = new EventAdapter(eventList, requireContext()); // Use the class-level variable
-//        recyclerView.setAdapter(eventAdapter);
-
-
-
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 filterEvents(year, month, dayOfMonth);
-//                // This is where you'll display events based on date
-//                // Create a Calendar instance for the selected date
-//                Calendar selectedDate = Calendar.getInstance();
-//                selectedDate.set(year, month, dayOfMonth);
-//                selectedDate.set(Calendar.HOUR_OF_DAY, 0);
-//                selectedDate.set(Calendar.MINUTE, 0);
-//                selectedDate.set(Calendar.SECOND, 0);
-//                selectedDate.set(Calendar.MILLISECOND, 0);
-//
-//                // Filter the eventList to only include events that occur on the selected date
-//                List<Event> filteredEvents = new ArrayList<>();
-//                for (Event event : eventList) {
-//                    Calendar eventDate = event.getDateCalendar();
-//                    eventDate.set(Calendar.HOUR_OF_DAY, 0);
-//                    eventDate.set(Calendar.MINUTE, 0);
-//                    eventDate.set(Calendar.SECOND, 0);
-//                    eventDate.set(Calendar.MILLISECOND, 0);
-//                    if (eventDate.equals(selectedDate) && selectedItems.contains(event.getSport())) {
-//                        filteredEvents.add(event);
-//                    }
-//                }
-//
-//                // Update the RecyclerView adapter with the filtered list of events
-//                eventAdapter = new EventAdapter(filteredEvents, requireContext());
-//                recyclerView.setAdapter(eventAdapter);
-
-                // Display the date in a Toast
-                //Toast.makeText(requireContext(), date.toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -220,17 +186,19 @@ public class CalendarFragment extends Fragment {
             eventDate.set(Calendar.SECOND, 0);
             eventDate.set(Calendar.MILLISECOND, 0);
 
-            // Load favorites
-            // Create an instance of VersionsAdapter to access the loadFavoriteState method
-//            List<Versions> calendarVersionsList = VersionsAdapter.getVersionsList();
-//            VersionsAdapter versionsAdapter = new VersionsAdapter(calendarVersionsList, requireContext());
-
             if (eventDate.equals(selectedDate) &&
                     (selectedItems.contains(event.getSport()) ||
                             (selectedItems.contains("Favorites") && versionsAdapter.loadFavoriteState(event.getSport())))) {
                 filteredEvents.add(event);
             }
         }
+
+        Collections.sort(filteredEvents, new Comparator<Event>() {
+            @Override
+            public int compare(Event e1, Event e2) {
+                return e1.getDateTimeCalendar().compareTo(e2.getDateTimeCalendar());
+            }
+        });
 
         // Update the RecyclerView adapter with the filtered list of events
         eventAdapter = new EventAdapter(filteredEvents, requireContext());
