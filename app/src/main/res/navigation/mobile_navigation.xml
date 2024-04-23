@@ -60,4 +60,15 @@
             app:destination="@+id/nav_logout" />
     </fragment>
 
+    <fragment
+        android:id="@+id/nav_admin_add_event"
+        android:name="com.example.clubsportsappnew.ui.admin.AdminFragment"
+        android:label="Add Event" >
+        <action
+            android:id="@+id/action_nav_to_admin_add_event"
+            app:destination="@id/nav_admin_add_event" />
+    </fragment>
+
+
+
 </navigation>
