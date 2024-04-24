@@ -1,0 +1,74 @@
+Index: app/src/main/java/com/example/clubsportsappnew/ui/home/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.clubsportsappnew.ui.home;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Toast;\r\n\r\nimport com.example.clubsportsappnew.databinding.LoginPageBinding;\r\n\r\npublic class LoginActivity extends AppCompatActivity {\r\n\r\n    LoginPageBinding binding;\r\n    DatabaseHelper databaseHelper;\r\n\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        binding = LoginPageBinding.inflate(getLayoutInflater());\r\n        setContentView(binding.getRoot());\r\n\r\n        databaseHelper = new DatabaseHelper(this);\r\n\r\n        binding.loginButton.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                String username = binding.username.getText().toString();\r\n                String password = binding.password.getText().toString();\r\n\r\n                if (username.equals(\"\") || password.equals(\"\")){\r\n                    Toast.makeText(LoginActivity.this, \"All fields are mandatory!\", Toast.LENGTH_SHORT).show();\r\n                } else {\r\n                    Boolean checkCredentials = databaseHelper.checkUsernamePassword(username, password);\r\n\r\n                    if (checkCredentials){\r\n                        Toast.makeText(LoginActivity.this, \"Login Successful\", Toast.LENGTH_SHORT).show();\r\n                        Intent intent = new Intent(getApplicationContext(), com.example.clubsportsappnew.MainActivity.class);\r\n                        startActivity(intent);\r\n                    } else {\r\n                        Toast.makeText(LoginActivity.this, \"Invalid Credentials\", Toast.LENGTH_SHORT).show();\r\n                    }\r\n                }\r\n            }\r\n        });\r\n\r\n        binding.signupText.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/clubsportsappnew/ui/home/LoginActivity.java b/app/src/main/java/com/example/clubsportsappnew/ui/home/LoginActivity.java
+--- a/app/src/main/java/com/example/clubsportsappnew/ui/home/LoginActivity.java	
++++ b/app/src/main/java/com/example/clubsportsappnew/ui/home/LoginActivity.java	
+@@ -8,12 +8,18 @@
+ import android.widget.Toast;
+ 
+ import com.example.clubsportsappnew.databinding.LoginPageBinding;
++import com.example.clubsportsappnew.ui.ConnectionClass;
++
++import java.sql.Connection;
++import java.util.concurrent.ExecutorService;
++import java.util.concurrent.Executors;
+ 
+ public class LoginActivity extends AppCompatActivity {
+ 
+     LoginPageBinding binding;
+     DatabaseHelper databaseHelper;
+-
++    Connection con;
++    String str;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+@@ -21,6 +27,10 @@
+         binding = LoginPageBinding.inflate(getLayoutInflater());
+         setContentView(binding.getRoot());
+ 
++        ConnectionClass connectionClass = new ConnectionClass();
++        con = connectionClass.CONN();
++
++
+         databaseHelper = new DatabaseHelper(this);
+ 
+         binding.loginButton.setOnClickListener(new View.OnClickListener() {
+@@ -53,4 +63,33 @@
+             }
+         });
+     }
++
++    public void connect(){
++        ExecutorService executorService = Executors.newSingleThreadExecutor();
++        executorService.execute(() -> {
++            try {
++
++                if (con == null){
++                    str = "error";
++                } else {
++                    str = "Connected with SQL Server";
++                }
++            } catch (Exception e) {
++                throw new RuntimeException(e);
++            }
++
++            runOnUiThread(()-> {
++
++                try {
++                    Thread.sleep(1000);
++                } catch (InterruptedException e){
++                    throw new RuntimeException(e);
++                }
++                Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
++
++
++
++            });
++        });
++    }
+ }
+\ No newline at end of file

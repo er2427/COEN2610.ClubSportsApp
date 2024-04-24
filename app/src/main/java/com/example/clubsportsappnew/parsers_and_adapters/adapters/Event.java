@@ -80,6 +80,13 @@ public class Event
         return dateFormat.format(date.getTime());
     }
 
+    public Calendar getDateTimeCalendar() {
+        Calendar dateTime = (Calendar) date.clone();
+        dateTime.set(Calendar.HOUR_OF_DAY, time.get(Calendar.HOUR_OF_DAY));
+        dateTime.set(Calendar.MINUTE, time.get(Calendar.MINUTE));
+        return dateTime;
+    }
+
     public Calendar getDateCalendar() {
         return date;
     }

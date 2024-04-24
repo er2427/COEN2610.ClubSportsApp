@@ -8,7 +8,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
