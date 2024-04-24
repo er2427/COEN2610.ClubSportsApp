@@ -1,6 +1,8 @@
 package com.example.clubsportsappnew;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -10,7 +12,7 @@ import android.content.Intent;
 import android.widget.TextView;
 import android.view.View;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.clubsportsappnew.ui.account_info.LoginActivity;
 import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,13 +25,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.clubsportsappnew.databinding.ActivityMainBinding;
-import com.example.clubsportsappnew.ui.account_info.MyAccountActivity;
 import com.example.clubsportsappnew.data.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMainBinding binding;
     TextView displayFirstName, displayLastName, displayEmail;
     DatabaseHelper databaseHelper;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        com.example.clubsportsappnew.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
@@ -81,22 +81,23 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 else if (id == R.id.nav_logout) {
-                    SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DataPref", MODE_PRIVATE);
+                    SharedPreferences sharedPreferences = MainActivity.this.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("isLoggedIn", false);
                     editor.apply();
 
-                    // Start LoginPage activity
-                    Intent intent = new Intent(MainActivity.this, com.example.clubsportsappnew.ui.account_info.LoginActivity.class);
+                    // Start LoginActivity
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK); // Clear task stack
                     startActivity(intent);
-
-                    // Finish current activity (MainActivity)
-                    finish();
+                    MainActivity.this.finish(); // Finish current activity (MainActivity)
 
                     return true;
                 }
                 return false;
             }
+
+
         });
 
         //making it show the users first and last name and email
