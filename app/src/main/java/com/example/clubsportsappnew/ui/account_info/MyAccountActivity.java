@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +37,18 @@ public class MyAccountActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Assuming you have a button for changing password in your layout with id changePasswordButton
+        Button changePasswordButton = findViewById(R.id.buttonChangePassword);
+
+        changePasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MyAccountActivity.this, ChangePasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
         textViewDisplayFirstName = findViewById(R.id.textViewDisplayFirstName);
         textViewDisplayLastName = findViewById(R.id.textViewDisplayLastName);
         textViewDisplayEmail = findViewById(R.id.textViewDisplayEmail);

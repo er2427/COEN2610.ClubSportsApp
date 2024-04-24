@@ -32,6 +32,8 @@
 
         <activity
             android:name=".ui.account_info.MyAccountActivity" />
+        <activity
+            android:name=".ui.account_info.ChangePasswordActivity" />
     </application>
 
 </manifest>
