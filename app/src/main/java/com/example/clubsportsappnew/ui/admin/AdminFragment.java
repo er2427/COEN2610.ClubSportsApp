@@ -6,12 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 
-import android.app.Activity;
-import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.database.Cursor;
-import android.content.Context;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.AlertDialog;
 import android.widget.ArrayAdapter;
@@ -29,6 +25,7 @@ import com.example.clubsportsappnew.ui.calendar.*;
 
 import com.example.clubsportsappnew.ui.home.DatabaseHelper;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -37,6 +34,7 @@ import java.util.List;
 
 public class AdminFragment extends Fragment {
 
+    private List<String> adminEmails = new ArrayList<>();
     private List<Event> eventList = new ArrayList<>();
 
     @Nullable
@@ -48,6 +46,38 @@ public class AdminFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        //Load the admin emails from the XML file
+        try {
+            loadAdminEmails();
+        } catch (XmlPullParserException | IOException e) {
+            e.printStackTrace();
+        }
+
+        String currentUserEmail = DatabaseHelper.getCurrentUserEmail();
+        if (adminEmails.contains(currentUserEmail)) {
+            setupAdminFunctionality(view);
+        } else {
+            Toast.makeText(getContext(), "You are not an admin", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void loadAdminEmails() throws IOException, XmlPullParserException {
+        XmlPullParser parser = getResources().getXml(R.xml.admin_users);
+        while (parser.next() != XmlPullParser.END_DOCUMENT) {
+            if (parser.getEventType() == XmlPullParser.START_TAG && parser.getName().equals("email")) {
+                continue;
+            }
+            String name = parser.getName();
+            if (name.equals("email")) {
+                if (parser.next() == XmlPullParser.TEXT) {
+                    adminEmails.add(parser.getText());
+                }
+            }
+        }
+    }
+
+    private void setupAdminFunctionality(@NonNull View view) {
 
         Button addEventButton = view.findViewById(R.id.addEventButton);
         addEventButton.setOnClickListener(new View.OnClickListener() {
@@ -117,4 +147,5 @@ public class AdminFragment extends Fragment {
         });
     }
 }
+
 

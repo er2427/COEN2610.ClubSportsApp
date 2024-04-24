@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<admins>
+    <admin>
+        <!-- Bowling-->
+        <email>abigail.berberich-smith@marquette.edu</email>
+    </admin>
+    <admin>
+        <!-- Power Lifting-->
+        <email>andrew.wochner@marquette.edu</email>
+    </admin>
+    <!-- Add more admins as needed -->
+</admins>
