@@ -14,6 +14,13 @@
         android:hint="Event Name" />
 
     <EditText
+        android:id="@+id/eventSportInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:hint="Event Sport" />
+    <EditText
         android:id="@+id/eventTypeInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

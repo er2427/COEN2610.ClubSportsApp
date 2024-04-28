@@ -6,9 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.app.AlertDialog;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -25,7 +22,18 @@ import com.example.clubsportsappnew.ui.calendar.*;
 
 import com.example.clubsportsappnew.ui.home.DatabaseHelper;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 import java.io.IOException;
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -34,7 +42,6 @@ import java.util.List;
 
 public class AdminFragment extends Fragment {
 
-    private List<String> adminEmails = new ArrayList<>();
     private List<Event> eventList = new ArrayList<>();
 
     @Nullable
@@ -46,38 +53,6 @@ public class AdminFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        //Load the admin emails from the XML file
-        try {
-            loadAdminEmails();
-        } catch (XmlPullParserException | IOException e) {
-            e.printStackTrace();
-        }
-
-        String currentUserEmail = DatabaseHelper.getCurrentUserEmail();
-        if (adminEmails.contains(currentUserEmail)) {
-            setupAdminFunctionality(view);
-        } else {
-            Toast.makeText(getContext(), "You are not an admin", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void loadAdminEmails() throws IOException, XmlPullParserException {
-        XmlPullParser parser = getResources().getXml(R.xml.admin_users);
-        while (parser.next() != XmlPullParser.END_DOCUMENT) {
-            if (parser.getEventType() == XmlPullParser.START_TAG && parser.getName().equals("email")) {
-                continue;
-            }
-            String name = parser.getName();
-            if (name.equals("email")) {
-                if (parser.next() == XmlPullParser.TEXT) {
-                    adminEmails.add(parser.getText());
-                }
-            }
-        }
-    }
-
-    private void setupAdminFunctionality(@NonNull View view) {
 
         Button addEventButton = view.findViewById(R.id.addEventButton);
         addEventButton.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +80,9 @@ public class AdminFragment extends Fragment {
                         EditText eventTypeInput = eventInputDialogView.findViewById(R.id.eventTypeInput);
                         String eventType = eventTypeInput.getText().toString();
 
+                        EditText eventSportInput = eventInputDialogView.findViewById(R.id.eventSportInput);
+                        String eventSport = eventSportInput.getText().toString();
+
                         EditText eventLocationInput = eventInputDialogView.findViewById(R.id.eventLocationInput);
                         String eventLocation = eventLocationInput.getText().toString();
 
@@ -124,10 +102,15 @@ public class AdminFragment extends Fragment {
                         // Add the new event to the event list
                         eventList.add(newEvent);
 
+                        appendEventToXMLFile(newEvent);
+
                         //Add the new event to the CalendarFragment
                         //CalendarFragment calendarFragment = (CalendarFragment) getFragmentManager().findFragmentById(R.id.nav_calendar);
                         //if (calendarFragment != null) {
-                        //    calendarFragment.addEvent(newEvent);
+                          // calendarFragment.addEvent(newEvent);
+                        //}
+                        //else {
+                          //  Toast.makeText(getContext(), "Calendar Fragment not found", Toast.LENGTH_SHORT).show();
                         //}
 
                         // Update the ListView in the AdminFragment to reflect the newly added event
@@ -146,6 +129,52 @@ public class AdminFragment extends Fragment {
             }
         });
     }
+    public void appendEventToXMLFile(Event event) {
+        try {
+            // Open the file
+            File file = new File(getContext().getFilesDir(), "practice_times.xml");
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+            Document document = documentBuilder.parse(file);
+
+            // Get the root element
+            Element root = document.getDocumentElement();
+
+            // Create a new practice element
+            Element practice = document.createElement("practice");
+
+            // Add child elements to the practice element
+            Element sportName = document.createElement("sportName");
+            sportName.appendChild(document.createTextNode(event.getSport()));
+            practice.appendChild(sportName);
+
+            Element eventType = document.createElement("eventType");
+            eventType.appendChild(document.createTextNode(event.getType()));
+            practice.appendChild(eventType);
+
+            Element eventLocation = document.createElement("eventLocation");
+            eventLocation.appendChild(document.createTextNode(event.getLocation()));
+            practice.appendChild(eventLocation);
+
+            Element eventDate = document.createElement("eventDate");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            eventDate.appendChild(document.createTextNode(sdf.format(event.getTime())));
+            practice.appendChild(eventDate);
+
+            root.appendChild(practice);
+
+            // Write the updated document to the file
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            DOMSource source = new DOMSource(document);
+            StreamResult result = new StreamResult(file);
+            transformer.transform(source, result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
+
+//Filtering according to what? Figure this out
+//What does the database get email? Figure this out
 
 
