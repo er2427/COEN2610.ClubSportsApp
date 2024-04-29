@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -69,4 +70,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+    public void updatePassword(String username, String newPassword) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("password", newPassword);
+        int rowsAffected = db.update("allusers", values, "username = ?", new String[]{username});
+        if (rowsAffected > 0) {
+            Log.d("DatabaseHelper", "Password updated successfully");
+        } else {
+            Log.d("DatabaseHelper", "Failed to update password");
+        }
+        db.close();
+    }
 }
