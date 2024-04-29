@@ -63,6 +63,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    /**
+     * Updates the current password in the database with the provided new password.
+     *
+     * @param username The username of the user.
+     * @param newPassword The new password to set.
+     */
+    public void updatePassword(String username, String newPassword) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", newPassword);
+        MyDB.update("allusers", contentValues, "username = ?", new String[]{username});
+    }
+
+
     public Cursor getUserData(String username){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("Select * from allusers where username = ?", new String[]{username});

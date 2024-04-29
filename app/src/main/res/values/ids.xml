@@ -16,4 +16,8 @@
     <item name="lastName" type="id" />
     <item name="signUpPassword" type="id" />
     <item name="signUpUsername" type="id" />
+    <item name="oldPassword" type="id" />
+    <item name="newPassword" type="id" />
+    <item name="changePasswordButton" type="id" />
+    <item name="backToLoginButton" type="id" />
 </resources>

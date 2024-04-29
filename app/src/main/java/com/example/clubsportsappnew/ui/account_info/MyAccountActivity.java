@@ -29,13 +29,7 @@ public class MyAccountActivity extends AppCompatActivity {
         binding = MyAccountBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.backText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MyAccountActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
         textViewDisplayFirstName = findViewById(R.id.textViewDisplayFirstName);
         textViewDisplayLastName = findViewById(R.id.textViewDisplayLastName);
         textViewDisplayEmail = findViewById(R.id.textViewDisplayEmail);
@@ -45,6 +39,15 @@ public class MyAccountActivity extends AppCompatActivity {
         String username = getIntent().getStringExtra("username");
 
         displayUserData(username);
+
+        binding.buttonChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyAccountActivity.this, ChangePassword.class);
+                intent.putExtra("username", username); // Pass the username to ChangePassword activity
+                startActivity(intent);
+            }
+        });
     }
 
     public void displayUserData(String username) {
@@ -62,7 +65,7 @@ public class MyAccountActivity extends AppCompatActivity {
                 textViewDisplayEmail.setText(email);
 
                 // Store user data in SharedPreferences
-                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("UserData", MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("MySharedPref", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("firstName", firstName);
                 editor.putString("lastName", lastName);
