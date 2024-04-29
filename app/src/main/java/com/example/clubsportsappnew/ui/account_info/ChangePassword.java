@@ -1,5 +1,6 @@
 package com.example.clubsportsappnew.ui.account_info;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -27,11 +28,13 @@ public class ChangePassword extends AppCompatActivity {
         oldPasswordEditText = findViewById(R.id.oldPassword);
         newPasswordEditText = findViewById(R.id.newPassword);
         Button changePasswordButton = findViewById(R.id.changePasswordButton);
+        Button backToLoginButton = findViewById(R.id.backToLoginButton);
+
 
         databaseHelper = new DatabaseHelper(this);
 
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-        username = sharedPreferences.getString("username", "");
+        username = getIntent().getStringExtra("username");
 
         changePasswordButton.setOnClickListener(v -> {
             String oldPassword = oldPasswordEditText.getText().toString();
@@ -42,6 +45,14 @@ public class ChangePassword extends AppCompatActivity {
                 Toast.makeText(ChangePassword.this, "Password changed successfully", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(ChangePassword.this, "Old password is incorrect", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        backToLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChangePassword.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }
