@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.clubsportsappnew.R;
 import com.example.clubsportsappnew.Versions;
 import com.example.clubsportsappnew.VersionsAdapter;
+import com.example.clubsportsappnew.ui.admin.AdminFragment;
 import com.example.clubsportsappnew.ui.home.SportXmlParser;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
@@ -205,6 +206,8 @@ public class CalendarFragment extends Fragment {
 
     private void filterEvents(int year, int month, int dayOfMonth) {
         // Create a Calendar instance for the selected date
+        eventList = new ArrayList<>(AdminFragment.eventList);
+        eventList.addAll(PracticeParser.parsePractices(requireContext()));
         Calendar selectedDate = Calendar.getInstance();
         selectedDate.set(year, month, dayOfMonth);
         selectedDate.set(Calendar.HOUR_OF_DAY, 0);
