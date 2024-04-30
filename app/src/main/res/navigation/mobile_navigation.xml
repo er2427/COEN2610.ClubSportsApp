@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/nav_admin"
-        android:name="com.marquette.clubsportsappnew.ui.account_info.Filter"
+        android:name="com.marquette.clubsportsappnew.ui.main_pages.AdminFragment"
         android:label="Filter" >
         <action
             android:id="@+id/action_nav_to_filter"

@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
 
                     return true;
                 }
+                else if (id == R.id.nav_admin) {
+                    navController.navigate(R.id.nav_admin);
+                    drawer.closeDrawers();
+                    return true;
+                }
                 return false;
             }
 

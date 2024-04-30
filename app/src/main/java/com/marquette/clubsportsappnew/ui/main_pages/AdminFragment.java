@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.clubsportsappnew.R;
+import com.marquette.clubsportsappnew.R;
 import com.marquette.clubsportsappnew.parsers_and_adapters.adapters.*;
 
 
