@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.marquette.clubsportsappnew"
+    namespace = "com.example.clubsportsappnew"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.marquette.clubsportsappnew"
+        applicationId = "com.example.clubsportsappnew"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
